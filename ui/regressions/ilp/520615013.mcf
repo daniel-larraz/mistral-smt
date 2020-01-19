@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+8x1+9x2<=36&3x1+7x2<=21&-2x1-3x2=-10

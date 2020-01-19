@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+(i<0 | i>= N) & i=0 & ( ((0<=k & k<N)->k<size) & N>=size) &k>=0 & size>0

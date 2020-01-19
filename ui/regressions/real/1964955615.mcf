@@ -1,0 +1,4 @@
+Type: solve
+Status: SAT
+(d2 = 0& ((argc = 2& d0 = 0)| (!argc = 2& !c = 118)| (argc = 2& !d0 = 0& ((-argc+N6:3:7+2<=0& optind = 0& (size(arrayref(drf(arrayref(drf(argv), N6:3:7+2)), 0))<=1| !arrayref(drf(arrayref(drf(argv), N6:3:7+2)), 0) = 118))| (!optind = 0& -argc+optind+N6:3:7+1<=0& (size(arrayref(drf(arrayref(drf(argv), optind+N6:3:7+1)), 0))<=1| !arrayref(drf(arrayref(drf(argv), optind+N6:3:7+1)), 0) = 118)))))& ((argc = 2& d0 = 0)| (!argc = 2& !c = 104)| (argc = 2& !d0 = 0& ((!optind = 0& -argc+optind+N6:3:7+1<=0& (size(arrayref(drf(arrayref(drf(argv), optind+N6:3:7+1)), 0))<=1| !arrayref(drf(arrayref(drf(argv), optind+N6:3:7+1)), 0) = 104))| (-argc+N6:3:7+2<=0& optind = 0& (size(arrayref(drf(arrayref(drf(argv), N6:3:7+2)), 0))<=1| !arrayref(drf(arrayref(drf(argv), N6:3:7+2)), 0) = 104)))))) & N6:3:7>=0 & argv>=0
+

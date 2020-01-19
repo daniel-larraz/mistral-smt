@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(Bunmodeled46(0)>0& Bunmodeled46(0)<=2& (!field160_32(options)%2=0| !1 = Bunmodeled46(0)| (99 = Bunmodeled47(0)& !0 = bit_and(field160_32(options), 4)& 0 = bit_and(2, field160_32(options))))& (!1 = Bunmodeled46(0)| field160_32(options)%2=0| Bunmodeled47(0)>2)& (!2 = Bunmodeled46(0)| !0 = bit_and(field160_32(options), 4))& (0 = bit_and(field160_32(options), 4)| (!2 = Bunmodeled46(0)& (!99 = Bunmodeled47(0)| !0 = bit_and(2, field160_32(options)))))& compat20 = 0)

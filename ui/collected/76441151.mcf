@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(Haddr#(4)>0& !0 = Bunmodeled1(0)& Haddr#(14)>0& ((f = Haddr#(4)& resume_in_progress = 0)| f = Haddr#(14)))

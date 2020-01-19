@@ -1,0 +1,38 @@
+ \hypertarget{simplify_simplify-intro}{}\section{\-What is Simplify?}\label{simplify_simplify-intro}
+\-Simplify is the constraint simplification engine of \-Mistral, which implements the algorithm described in \href{http://www.cs.wm.edu/~idillig/sas2010.pdf}{\tt this paper}. \-It brings formulas to a so-\/called \char`\"{}simplified form\char`\"{} which has the guarantee that no subpart of the formula is redundant. \-Simplification can be useful either to make the constraint more readable by humans or in contexts where it is desirable or beneficial to keep formulas as concise and as non-\/redundant as possible.\hypertarget{simplify_use-simplify}{}\section{\-How to Use Simplify}\label{simplify_use-simplify}
+\-Using the simplification functionality of constraint is very simple\-: \-It simplifies formulas every time you make a satsfiability or validity query using sat() or valid(). \-The following example illustrates how simplification works\-:
+
+\begin{DoxyVerb}
+     Term* x = VariableTerm::make("x");
+     Term* y = VariableTerm::make("y");
+
+     Constraint c1(x, ConstantTerm::make(0), ATOM_GT);
+     Constraint c2(y, ConstantTerm::make(1), ATOM_EQ);
+     Constraint c3 = (c1 | (!c1 & c2));
+
+     cout << "Redundant constraint: " << c3 << endl;
+     c3.sat();
+     cout << "Simplified constraint: " << c3 << endl;
+    \end{DoxyVerb}
+
+
+\-Here, we construct a constraint c3, which represents the formula x$>$0 $|$ (x$<$=0 \& y=1). \-However, as a result of the satisfiability query c3.\-sat(), c3 gets simplified, and the formula that is printed at the last line is the simpler constraint x$>$0$|$ y=1. \-Simplify guarantees that any formula that is valid gets simplified to true, and any unsatisfiable formula simplifies to false. \-If simplification is not desired or needed, use the sat\-\_\-discard() and valid\-\_\-discard() methods.
+
+\-Another functionality that \-Simplify provides is to simplify a formula with respect to another one. \-This is achieved using the assume function provided in \hyperlink{Constraint_8h_source}{\-Constraint.\-h}. \-Here is an example illustrating the use of assume\-:
+
+\begin{DoxyVerb}
+     Term* x = VariableTerm::make("x");
+     Term* y = VariableTerm::make("y");
+
+     Constraint c1(x, ConstantTerm::make(1), ATOM_GT);
+     Constraint c2(y, ConstantTerm::make(2), ATOM_EQ );
+     Constraint c3 = c1 | c2;
+
+     cout << "Original constraint: " << c3 << endl;
+     c3.assume(!c1);
+     cout << "After assuming !c1: " << c3 << endl;
+
+    \end{DoxyVerb}
+
+
+\-Here, we first construct a constraint c3, which represents (x $>$ 1 $|$ y = 2). \-After the assume operation at the last line, the new constraint c3 now becomes y=2, since we are assuming that x $<$=1. 

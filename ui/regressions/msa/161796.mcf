@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(i3 = i2& i0 = i1& ((i2 = 0& d0 = 3& d2 = 0& x>-2& i1>N6:8:3+i2+1& i1<argc+i2& var_1+x!=0)| (i2 = 0& d2 = 0& x>-2& i1<argc+i2& i1>N6:8:3+i2& d0>3& var_1+x!=0)| (i2 = 0& d0 = 1& d2 = 0& x>-2& i1<argc+i2& i1>N6:8:3+i2& var_1+x!=0)| (i2 = 0& d2 = 0& x>-2& i1<argc+i2& d0<=0& i1>=N6:8:3+i2& var_1+x!=0)| (i2 = 0& d2 = 0& x>-2& i1<argc+i2& d0 = 2& i1>=i2& var_1+x!=0)))

@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+d%4=0 & d%6=5

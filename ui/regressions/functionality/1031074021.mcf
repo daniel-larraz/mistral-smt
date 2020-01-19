@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(l<=k&k<=u->tl(a,k)=tl(b,k))&(l<=u->tl(a,l)=tl(b,l)&tl(a,u)=tl(b,u))&l<=k&k<=u+1&tl(aa,k)!=tl(b,k)&tl(aa,v)=tl(b,v)&v=u+1

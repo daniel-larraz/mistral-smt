@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(password = 0& length(drf(password))>=0& (length(drf(password))>0| !0 = field3276_32(options))& length(drf(field8_64(drf(field48_64(drf(authctxt))))))>=0& var_2_12 = 0& length(drf(field8_64(drf(field48_64(drf(authctxt))))))<=0)

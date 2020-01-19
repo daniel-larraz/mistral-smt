@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+a=b & (b=c | a=c)

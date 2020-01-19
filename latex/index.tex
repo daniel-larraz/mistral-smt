@@ -1,0 +1,123 @@
+\hypertarget{index_intro_sec}{}\section{\-Introduction}\label{index_intro_sec}
+\-Mistral is an \href{http://en.wikipedia.org/wiki/Satisfiability_Modulo_Theories}{\tt \-S\-M\-T solver } which decides satisfiability of formulas in the \href{http://en.wikipedia.org/wiki/Presburger_arithmetic}{\tt theory of linear arithmetic over integers } and theory of equality with uninterpreted functions. \-Mistral is written in \-C++ and can be used both through a graphical user interface as well as a \-C++ library. \-In addition to deciding satisfiability, \-Mistral consists of the following modules\-:
+\begin{DoxyItemize}
+\item \hyperlink{explain}{\-Explain} which can be used for performing \href{http://en.wikipedia.org/wiki/Abductive_reasoning}{\tt abductive inference }
+\item \hyperlink{simplify}{\-Simplify} which can be used for simplifying formulas
+\item \hyperlink{cooper}{\-Cooper} which performs quantifier elimination
+\item \hyperlink{msa}{\-M\-S\-A\-Finder} which can be used to compute minimum satisfying assignments
+\end{DoxyItemize}\hypertarget{index_req_section}{}\section{\-Requirements and Installation}\label{index_req_section}
+\-You can obtain the source code of \-Mistral from \href{http://www.cs.wm.edu/~tdillig/mistral-1.1.tar.gz}{\tt http\-://www.\-cs.\-wm.\-edu/$\sim$tdillig/mistral-\/1.\-1.\-tar.\-gz}
+
+\-Mistral has been tested to compile on \-Ubuntu 12.\-04. \-First, to compile \-Mistral, you need to have cmake installed on your system as well as a set of other required libraries. \-On a recent \-Ubuntu/\-Kubuntu system, the following command will install everything you need\-: \begin{DoxyVerb}
+sudo apt-get install libc6-dev-i386 gettext gawk flex libmpfr-dev cmake  \
+kdelibs5-dev libgtkmm-2.4-dev libboost-thread-dev libboost-serialization-dev \
+libglademm-2.4-dev graphviz doxygen g++ libgmp-dev build-essential flex bison  \
+binutils-gold
+\end{DoxyVerb}
+
+
+\-Once you have cmake installed, go to the mistral folder and type the following commands \begin{DoxyVerb}
+mkdir build
+cd build
+cmake ..
+make
+\end{DoxyVerb}
+
+
+\-Once you type these commands, you can use \-Mistral either through a graphical user interface or as a library. \-For using \-Mistral from the \-G\-U\-I, type the following commands\-:
+
+\begin{DoxyVerb}
+cd ui
+../build/ui/mistral_ui
+\end{DoxyVerb}
+
+
+\-You can only start the \-Mistral \-G\-U\-I from the /mistral/ui folder
+
+\-If you want to use \-Mistral as a library, see the \-Section \hyperlink{index_start}{\-Getting \-Started}.\hypertarget{index_start}{}\section{\-Getting Started}\label{index_start}
+\-Logical formulas are represented in \-Mistral using the \hyperlink{classConstraint}{\-Constraint} type. \-For example, you can construct boolean constants true and false in the following way\-: \begin{DoxyVerb}
+Constraint t(true);
+Constraint f(false);
+\end{DoxyVerb}
+ \-Here \char`\"{}t\char`\"{} represents the boolean constant \char`\"{}true\char`\"{} and \char`\"{}f\char`\"{} represents the boolean constant false. \-More complicated formulas are constructed using \hyperlink{classTerm}{\-Term}. \-Terms can be \hyperlink{classConstantTerm}{\-Constant\-Term} (such as 0), \hyperlink{classVariableTerm}{\-Variable\-Term} (such as x), \hyperlink{classArithmeticTerm}{\-Arithmetic\-Term} (such as 3x + 2y), or \hyperlink{classFunctionTerm}{\-Function\-Term} (such as f(g(x, 0), a)). \-Here is an example illustrating creation of various kinds of terms. \begin{DoxyVerb}
+   Term* t1 = VariableTerm::make("a");
+   Term* t2 = VariableTerm::make("b");
+
+   map<Term*, long int> elems;
+   elems[t1] = 3;
+   elems[t2] = 7;
+   Term* t3 = ArithmeticTerm::make(elems, 2);
+
+   vector<Term*> args;
+   args.push_back(t1);
+   Term* t4 = FunctionTerm::make("f", args);
+
+\end{DoxyVerb}
+ \-Here, term t3 represents the arithmetic term 3a + 7b + 2, and term t4 represents the function term f(a).
+
+\-Now, using these terms, we can create more interesting constraints. \-For example, the following code snippet shows how to create the constraint f(a) $<$= b \& 3a + 7b + 2 = 4\-:
+
+\begin{DoxyVerb}
+Constraint c1(t4, t2, ATOM_LEQ);
+Constraint c2(t3, ConstantTerm::make(4), ATOM_EQ);
+Constraint c3 = c1 & c2;
+\end{DoxyVerb}
+
+
+\-In this example, c1 corresponds to the formula f(a) $<$= b, c2 represents the formula 3a + 7b + 2 =4, and c3 represents the conjunction of c1 and c2. \-Mistral overloads the \-C++ operators \&, $|$, ! for performing conjunction, disjunction, and negation of formulas respectively. \-For example, in the following code snippet\-:
+
+\begin{DoxyVerb}
+Constraint c4 = !c1;
+Constraint c5 = c4 | c2;
+\end{DoxyVerb}
+
+
+c4 represents the formula f(a) $>$ b and c5 represents the disjunction of f(a) $>$ b and 3a + 7b + 2 = 4.\hypertarget{index_sat}{}\section{\-Checking Satisfiability and Validity}\label{index_sat}
+\-Now that we can construct constraints, we can use \-Mistral to decide their satisfiability and validity\-:
+
+\begin{DoxyVerb}
+bool res1 = c5.sat_discard();
+bool res2 = c3.valid_discard();
+bool res3 = c5.equivalent(c3);
+\end{DoxyVerb}
+
+
+\-Here res1 is true if and only if the formula represented by c5 is satisfiable, and res2 is true if and only if the formula represented by c3 is valid. \-The equivalent method of \hyperlink{classConstraint}{\-Constraint} is used to check equivalence. \-Therefore, res3 is true if and only if c2 and c5 are equivalent.
+
+\-There is also another way to check satisfiability and validity in \-Mistral using the sat() and valid() methods rather than sat\-\_\-discard() and valid\-\_\-discard(). \-The difference between these is that sat() and valid() also simplify the formula, as described in this \href{http://www.cs.wm.edu/~idillig/sas2010.pdf}{\tt publication }. \-Therefore, the methods sat and valid are more expensive than sat\-\_\-discard and valid\-\_\-discard and should only be used if you want the formula to get simplified after performing a satisfiability or validity query. \-The section \hyperlink{simplify}{\-Simplify} describes this in more detail.
+
+\-Given a satisfiable constraint, \-Mistral also provides a way for obtaining satisfying assignments as follows\-:
+
+\begin{DoxyVerb}
+map<Term*, SatValue> assignment;
+bool res = c5.get_assignment(assignment);
+for(auto it = assignment.begin(); it!= assignment.end(); it++)
+{
+    Term* t = it->first;
+    SatValue sv = it->second;
+    cout << " Term: " << t->to_string() << " satisfying assignment: " << sv.to_string() << endl;
+}
+\end{DoxyVerb}
+
+
+\-The code snippet above shows how to obtain and print the satisfying assignment for formula represented by c5. \-In this code snippet, res indicates whether c5 is satisfiable, and, if res is true, \char`\"{}assignment\char`\"{} is a full satisfying assignment from each term in the formula to a satisfying value.\hypertarget{index_further}{}\section{\-Other Functionalities}\label{index_further}
+\-In addition to checking satisfiability and validity, \-Mistral can be used for performing abductive inference, simplifying constraints, performing quantifier elimination, and computing minimum satisfying assignments. \-For tutorials on using these functionalities, please refer to the \hyperlink{explain}{\-Explain}, \hyperlink{simplify}{\-Simplify}, \hyperlink{cooper}{\-Cooper}, and \hyperlink{msa}{\-M\-S\-A\-Finder} pages.\hypertarget{index_people}{}\section{\-People}\label{index_people}
+\-Mistral is developed and maintained by\-:
+\begin{DoxyItemize}
+\item \href{http://www.cs.wm.edu/~tdillig/}{\tt \-Thomas \-Dillig }
+\item \href{http://www.cs.wm.edu/~idillig/}{\tt \-Isil \-Dillig }
+\end{DoxyItemize}
+
+\-Other people who have contributed to some of the ideas implemented in \-Mistral include\-:
+\begin{DoxyItemize}
+\item \href{http://www.kenmcmil.com/}{\tt \-Ken \-Mc\-Millan }
+\item \href{http://theory.stanford.edu/~aiken/}{\tt \-Alex \-Aiken }
+\end{DoxyItemize}\hypertarget{index_publications}{}\section{\-Publications}\label{index_publications}
+\-The techniques described in the following publications are incorporated in \-Mistral\-:
+\begin{DoxyItemize}
+\item \href{http://www.cs.wm.edu/~idillig/cav2009.pdf}{\tt \-Cuts-\/from-\/\-Proofs\-: \-A \-Complete and \-Practical \-Technique for \-Solving \-Linear \-Inequalities over \-Integers }, \-Isil \-Dillig, \-Thomas \-Dillig, and \-Alex \-Aiken, \-C\-A\-V 2009
+\item \href{http://www.cs.wm.edu/~idillig/sas2010.pdf}{\tt \-Small \-Formulas for \-Large \-Programs\-: \-Constraint \-Simplification for \-Scalable \-Static \-Analysis }, \-Isil \-Dillig, \-Thomas \-Dillig, \-Alex \-Aiken, \-S\-A\-S 2010
+\item \href{http://www.cs.wm.edu/~idillig/cav2012.pdf}{\tt \-Minimum \-Satisfying \-Assignments for \-S\-M\-T }, \-Isil \-Dillig, \-Thomas \-Dillig, \-Ken \-Mc\-Millan, \-Alex \-Aiken, \-C\-A\-V 2012 
+\end{DoxyItemize}\hypertarget{index_ack}{}\section{\-Acknowledgments}\label{index_ack}
+\-We are grateful to the developers of the \href{http://minisat.se/}{\tt \-Mini\-S\-A\-T } \-S\-A\-T solver, which forms the \-S\-A\-T solving engine of \-Mistral. \-We also thank the developers of the \href{http://gmplib.org/}{\tt \-G\-N\-U \-M\-P \-Bignum \-Library }. \hypertarget{index_license}{}\section{\-License and Support}\label{index_license}
+\-Mistral is freely available for research purposes under the \href{http://www.gnu.org/licenses/gpl.html}{\tt \-G\-P\-L license }. 

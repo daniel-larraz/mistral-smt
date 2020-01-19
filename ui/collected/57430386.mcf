@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!pw = 0& !0 = Bunmodeled14(0)& !userfile = 0& !0 = field3176_32(options)& 0 = Bunmodeled18(0)& field28_32(Bunmodeled23(0))>=0& field16_32(drf(pw))>=0& field24_32(Bunmodeled22(0))>=0& ((!0 = field28_32(Bunmodeled23(0))& !field16_32(drf(pw)) = field28_32(Bunmodeled23(0)))| ((0 = field28_32(Bunmodeled23(0))| field16_32(drf(pw)) = field28_32(Bunmodeled23(0)))& !0 = bit_and(field24_32(Bunmodeled22(0)), 18))))

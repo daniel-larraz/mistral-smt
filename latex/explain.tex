@@ -1,0 +1,53 @@
+ \hypertarget{explain_abduction}{}\section{\-What is Abductive Inference?}\label{explain_abduction}
+\-Explain is the component of \-Mistral that performs abductive inference (or abduction). \-Given a formula $ \phi_1 $ and another formula $ \phi_2 $, abduction is the problem of finding an explanatory hypothesis $ \psi $ such that\-: $ \phi_1 \land \psi \models \phi_2 $ and $ \phi_1 \land \psi $ is satisfiable. \-In contrast to logical deduction which reaches valid conclusions from a set of premises, abduction is used to infer likely premises for a given conclusion. \-In general, there are many solutions to an abductive inference problem, but typically, concise and general solutions are more desirable than others. \-The abductive solutions computed by \-Explain are guaranteed to contain a minimum number of variables among all other abductive solutions. \-Furthermore, among other solutions that contain the same set of variables, the solutions computed by \-Explain are as logically weak as possible.\hypertarget{explain_use}{}\section{\-Using Explain}\label{explain_use}
+\-To perform abductive inference, use the abduce functions in \hyperlink{Constraint_8h_source}{\-Constraint.\-h}. \-Here is an example illustrating a typical usage of abduction\-:
+
+\begin{DoxyVerb}
+  Term* x = VariableTerm::make("x");
+  Term* y = VariableTerm::make("y");
+  Term* z = VariableTerm::make("z");
+
+  Constraint c1(x, ConstantTerm::make(0), ATOM_LEQ);
+  Constraint c2(y, ConstantTerm::make(1), ATOM_GT);
+  Constraint premises = c1 & c2;
+
+  map<Term*, long int> elems;
+  elems[x] = 2;
+  elems[y] = -1;
+  elems[z] = 3;
+  Term* t = ArithmeticTerm::make(elems);
+  Constraint conclusion(t, ConstantTerm::make(10), ATOM_LEQ);
+
+  Constraint explanation = conclusion.abduce(premises);
+  cout << "Explanation: " << explanation << endl;
+   \end{DoxyVerb}
+
+
+\-Here, constraint c1 represents the formula x$<$=0, and c2 represents the formula y $>$ 1. \-Hence, the constraint premises represents x$<$=0 \& y $>$ 1. \-The constraint conclusion stands for the formula 2x -\/ y +3z $<$=10. \-Here, we use the abduce function to find a formula called \char`\"{}explanation\char`\"{} such that premises and explanation together imply the conclusion and the premises and explanation are consistent with each other. \-For this example, the solution that is computed by \-Explain (and printed out at the last line) is x$<$=4.
+
+\-Explain also supports computing abductive solutions that must be consistent with a set of given formulas. \-For example, suppose that we want the abductive solution to be consistent with z $>$ 1 as well as x $<$ 2. \-In this case, we can create a set of consistency requirements and pass it as an argument to abduce. \-The following code snippet illustrates this functionality\-:
+
+\begin{DoxyVerb}
+Constraint c3(z, ConstantTerm::make(1), ATOM_GT);
+Constraint c4(x, ConstantTerm::make(2), ATOM_LT);
+set<Constraint> reqs;
+reqs.insert(c3);
+reqs.insert(c4);
+explanation = conclusion.abduce(premises, reqs);
+\end{DoxyVerb}
+
+
+\-In this case, \-Explain will ensure that the computed abductive solution is consistent with every formula in the set reqs.
+
+\-Finally, in some cases, we might prefer abductive solutions that contain certain variables over others. \-For instance, in our earlier example, we might want abductive solutions containing variables z,y over solutions that contain x. \-For this reason, \-Explain allows specifying costs for each variable. \-Here is an example illustrating this functionality\-:
+
+\begin{DoxyVerb}
+map<Term*, int> costs;
+costs[x] = 5;
+costs[y] = 1;
+costs[z] = 1;
+explanation = conclusion.abduce(premises, reqs, costs);
+\end{DoxyVerb}
+
+
+\-In this case, since the cost of x is higher than the sum of the costs of y,z \-Explain will return solutions that contain both y and z rather than solutions that contain only x. 

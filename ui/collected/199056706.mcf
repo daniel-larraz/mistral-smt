@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(8channels_alloc=field_minus_4_32(drf(channels))& channels_alloc>=0& field_minus_4_32(drf(channels))>=0& (channels_alloc = 0| (!channels_alloc = 0& !channels = 0))& (channels_alloc = 0| !var_2_6 = var_3_6))

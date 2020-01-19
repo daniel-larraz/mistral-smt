@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!optind = 0& !112 = arrayref(drf(elim_1), 0)& drf(argv) = drf(elim_1)& 0<=argc& elim_2 = arrayref(drf(elim_1), 0)& !arrayref(drf(elim_2), 0) = 112& elim_1 = arrayref(drf(elim_2), 0)& !d2 = 0& !drf(argv) = drf(elim_2)& !arrayref(drf(elim_2), 0) = 118& 0<argc+optind& !55 = arrayref(drf(elim_1), 0)& 0<argc& !elim_1 = elim_2& !elim_2 = arrayref(drf(elim_2), 0)& !d1 = 0& !arrayref(drf(elim_1), 0) = 118& argc+2<=optind& !55 = arrayref(drf(elim_2), 0)& !optind = 1& $d1 = size(arrayref(drf(elim_2), 0))& $d0 = size(arrayref(drf(elim_1), 0))& 2<=$d0& 2<=$d1) 

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(var_3_2 = var_2_2& field268_32(options)<=100& !supported_authentications = 0& supported_authentications>=0& e7_27:11>=0& (((14 = Bunmodeled4(0)| 0 = bit_and(supported_authentications, 16)| 0 = field32_32(options))& Bunmodeled7(0)+e7_27:11=var_2_2)| (!14 = Bunmodeled4(0)& !0 = bit_and(supported_authentications, 16)& !0 = field32_32(options)& e7_27:11 = var_2_2)))

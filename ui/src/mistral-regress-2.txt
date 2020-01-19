@@ -1,0 +1,21 @@
+
+
+
+(shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& 2=shift7call+f7call& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& (-shift6call-f6call+11<=0| shift6call+f6call<=9)& +ffinal7call=shift7call+f7call& (shift6call+f6call<=12| -shift6call-f6call+14<=0)& (-shift6call-f6call+3<=0| shift6call+f6call<=1)& (-shift6call-f6call+12<=0| shift6call+f6call<=10)& (-shift6call-f6call+13<=0| shift6call+f6call<=11))
+*** SAT ***
+
+(shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& 2=shift7call+f7call& (-shift6call-f6call+11<=0| shift6call+f6call<=9)& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& +ffinal7call=shift7call+f7call& (-shift6call-f6call+3<=0| shift6call+f6call<=1)& (shift6call+f6call<=12| -shift6call-f6call+14<=0)& (-shift6call-f6call+12<=0| shift6call+f6call<=10)& (-shift6call-f6call+13<=0| shift6call+f6call<=11))
+*** SAT ***
+
+((shift6call+f6call<=12| -shift6call-f6call+14<=0)& shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& 2=shift7call+f7call& (-shift6call-f6call+3<=0| shift6call+f6call<=1)& (-shift6call-f6call+12<=0| shift6call+f6call<=10)& +ffinal7call=shift7call+f7call& (-shift6call-f6call+13<=0| shift6call+f6call<=11)& (-shift6call-f6call+11<=0| shift6call+f6call<=9))
+*** SAT ***
+
+((shift6call+f6call<=12| -shift6call-f6call+14<=0)& shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& (-shift6call-f6call+11<=0| shift6call+f6call<=9)& 2=shift7call+f7call& (-shift6call-f6call+13<=0| shift6call+f6call<=11)& (-shift6call-f6call+3<=0| shift6call+f6call<=1)& +ffinal7call=shift7call+f7call& (-shift6call-f6call+12<=0| shift6call+f6call<=10))
+*** SAT ***
+
+(shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& 2=shift7call+f7call& (-shift6call-f6call+12<=0| shift6call+f6call<=10)& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& +ffinal7call=shift7call+f7call& (-shift6call-f6call+3<=0| shift6call+f6call<=1)& (-shift6call-f6call+11<=0| shift6call+f6call<=9)& (shift6call+f6call<=12| -shift6call-f6call+14<=0)& (-shift6call-f6call+13<=0| shift6call+f6call<=11))
+*** SAT ***
+
+(shift6call = 0& +ffinal6call=shift6call+f6call& shift7call = 0& (-shift6call-f6call+2<=0| shift6call+f6call<=0)& 2=shift7call+f7call& (-shift6call-f6call+13<=0| shift6call+f6call<=11)& (-shift6call-f6call+11<=0| shift6call+f6call<=9)& +ffinal7call=shift7call+f7call& (shift6call+f6call<=12| -shift6call-f6call+14<=0)& (-shift6call-f6call+12<=0| shift6call+f6call<=10)& (-shift6call-f6call+3<=0| shift6call+f6call<=1))
+*** SAT ***
+

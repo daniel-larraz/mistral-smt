@@ -1,0 +1,28 @@
+Type: solve
+Status: UNSAT
+f(a,b, e) != f(c,d, f) & !(a!=c | b!=d | e !=f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

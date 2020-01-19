@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+i1=1&i2=1&i3=1&tl(a,i3)=1&i4=1&tl(b,i4)=1&t1=tl(a,i1)&t2=tl(b,i2)&t1<t2

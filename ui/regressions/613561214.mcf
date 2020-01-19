@@ -1,0 +1,26 @@
+Type: solve
+Status: UNSAT
+f#(a) = f#(b) & a>=2 & b <1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

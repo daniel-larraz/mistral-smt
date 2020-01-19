@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+tl(a,k)=tl(b,j)&k=j&tl(a,k)!=tl(b,k)&tl(a,j)=tl(b,j)

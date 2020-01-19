@@ -1,0 +1,6 @@
+Type: solve
+Status: SAT
+(argc<=0| (argc-N6:5:3<=1& d3 = 1)| (-argc+1<=0& d3<=0& unmodeled_val7 = 0)| (-argc+N6:5:3+2<=0& d3 = 1& unmodeled_val7 = 0)| (-argc+N6:5:3+1<=0& d3 = 2& unmodeled_val7 = 0)| (-argc+N6:5:3+2<=0& -d3+4<=0& unmodeled_val7 = 0)| (argc-N6:5:3<=0& d3 = 2)| (argc-N6:5:3<=1& -d3+4<=0)| (argc-N6:5:3<=1& d3 = 2& !unmodeled_val7 = 0)| (-argc+N6:5:3+2<=0& d3 = 2)| -argc+N6:5:3+4<=0| (d3 = 3& !unmodeled_val7 = 0& argc-N6:5:3<=3)| (-argc+2<=0& d3<=0)| (argc<=1& !unmodeled_val7 = 0)| (-argc+N6:5:3+3<=0& (-d3+4<=0| d3 = 1| unmodeled_val7 = 0))| (argc-N6:5:3<=2& (d3 = 3| ((-d3+4<=0| d3 = 1)& !unmodeled_val7 = 0))))
+
+
+

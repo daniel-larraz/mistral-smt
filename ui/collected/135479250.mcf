@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!nmemb = 0& !size = 0& size>=0& nmemb>=0& size<=Xdivide(4294967295, nmemb)& !0 = Zalloc#(0, 0)& Zalloc#(0, 0)>=0)

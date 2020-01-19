@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+l<=k&k<=u+1&u+1<=k&tl(b,k)!=tl(aa,k)&tl(b,v)=tl(aa,v)&v=u+1

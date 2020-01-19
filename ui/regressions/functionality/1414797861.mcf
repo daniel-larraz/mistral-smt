@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+x%2=1 & x+y=3 & y%3=0 

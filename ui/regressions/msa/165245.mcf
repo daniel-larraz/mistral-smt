@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(argc = 2& argv>0& ((!argc = 2& !c = -1)| (((N6:3:7+2<=argc& optind = 0& var_2<=1)| (!optind = 0& N6:3:7+optind<argc& !var_4 = -1)| (N6:3:7+2<=argc& optind = 0& !var_1 = -1)| (!optind = 0& N6:3:7+optind<argc& var_3<=1))& argc = 2& !d0 = 0))& N6:3:7>=0)

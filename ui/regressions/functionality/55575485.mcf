@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+d%4=0 & d%6=2

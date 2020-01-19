@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter1>=0& (!Bunmodeled30(it_counter1) = 0| !68 = Bunmodeled0(it_counter0))& (!79 = Bunmodeled0(it_counter0)| Bunmodeled1(it_counter1) = 0| 0 = Bunmodeled2(it_counter1))& (!Bunmodeled27(it_counter1) = 0| !82 = Bunmodeled0(it_counter0))& it_counter0>=0& (!var_2_145 = it_counter1| !111 = Bunmodeled0(it_counter0)| !var_3_147 = it_counter1)& !86 = Bunmodeled0(it_counter0)& (!0 = Bunmodeled19(it_counter1)| !109 = Bunmodeled0(it_counter0))& (!119 = Bunmodeled0(it_counter0)| !Bunmodeled10(it_counter1) = 2147483646)& (!0 = Bunmodeled24(it_counter1)| !76 = Bunmodeled0(it_counter0))& (!Bunmodeled17(it_counter1) = -1| !0 = Bunmodeled15(it_counter1)| !99 = Bunmodeled0(it_counter0))& (Bunmodeled22(it_counter1)>0| !112 = Bunmodeled0(it_counter0)))

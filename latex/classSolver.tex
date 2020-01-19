@@ -1,0 +1,99 @@
+\hypertarget{classSolver}{\section{\-Solver \-Class \-Reference}
+\label{classSolver}\index{\-Solver@{\-Solver}}
+}
+\-Inheritance diagram for \-Solver\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSolver}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolver_a39f7b0b596e4ab7936b316e37a457035}{{\bfseries \-Solver} (\hyperlink{classCNode}{\-C\-Node} $\ast$node, simplification\-\_\-level level, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ $\ast$assignments=\-N\-U\-L\-L, bool use\-\_\-dnf=false)}\label{classSolver_a39f7b0b596e4ab7936b316e37a457035}
+
+\item 
+\hypertarget{classSolver_a0d11a686e70c88fb02cb3556952f9589}{{\bfseries \-Solver} (\hyperlink{classCNode}{\-C\-Node} $\ast$node, \hyperlink{classCNode}{\-C\-Node} $\ast$assumptions, simplification\-\_\-level level, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ $\ast$assignments=\-N\-U\-L\-L)}\label{classSolver_a0d11a686e70c88fb02cb3556952f9589}
+
+\item 
+\hypertarget{classSolver_a75acae58b51db12008c3128c37b0ef9a}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries solve} (\hyperlink{classCNode}{\-C\-Node} $\ast$node, \hyperlink{classCNode}{\-C\-Node} $\ast$assumptions, simplification\-\_\-level level, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ $\ast$assignments)}\label{classSolver_a75acae58b51db12008c3128c37b0ef9a}
+
+\item 
+\hypertarget{classSolver_a7b24ed5645557b5c44aef05b265bf1ca}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-result} ()}\label{classSolver_a7b24ed5645557b5c44aef05b265bf1ca}
+
+\item 
+\hypertarget{classSolver_a59e014be51c7dedaf0ea98357a70b158}{string {\bfseries get\-\_\-stats} ()}\label{classSolver_a59e014be51c7dedaf0ea98357a70b158}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolver_acf62b72a293cc34ab8c87f17272a8c04}{static bool {\bfseries implies} (\hyperlink{classCNode}{\-C\-Node} $\ast$node1, \hyperlink{classCNode}{\-C\-Node} $\ast$node2)}\label{classSolver_acf62b72a293cc34ab8c87f17272a8c04}
+
+\item 
+\hypertarget{classSolver_aa8c6de3271be1d8cd99abafe45202a8f}{static bool {\bfseries equivalent} (\hyperlink{classCNode}{\-C\-Node} $\ast$node1, \hyperlink{classCNode}{\-C\-Node} $\ast$node2)}\label{classSolver_aa8c6de3271be1d8cd99abafe45202a8f}
+
+\item 
+\hypertarget{classSolver_ac86336f7c37d7eac95df6d58403e5d65}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-relevant\-\_\-background} (\hyperlink{classCNode}{\-C\-Node} $\ast$background, \hyperlink{classCNode}{\-C\-Node} $\ast$formula\-\_\-to\-\_\-simplify)}\label{classSolver_ac86336f7c37d7eac95df6d58403e5d65}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolver_ac2d16c892aea8c4e83ec3941ac16fc25}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries propagate\-\_\-equalities} (\hyperlink{classCNode}{\-C\-Node} $\ast$node, \hyperlink{classCNode}{\-C\-Node} $\ast$\&active\-\_\-constraint)}\label{classSolver_ac2d16c892aea8c4e83ec3941ac16fc25}
+
+\item 
+\hypertarget{classSolver_a71032cd9586a44c6eadd87333661f429}{void {\bfseries add\-\_\-to\-\_\-replacement\-\_\-map} (\hyperlink{classTerm}{\-Term} $\ast$to\-\_\-replace, \hyperlink{classTerm}{\-Term} $\ast$replacement, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&replacement\-\_\-map)}\label{classSolver_a71032cd9586a44c6eadd87333661f429}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolver_acab17162109917b090e1bb65db45410d}{int {\bfseries fresh\-\_\-var\-\_\-counter}}\label{classSolver_acab17162109917b090e1bb65db45410d}
+
+\item 
+\hypertarget{classSolver_a8bfe57e04a9266e094809eff9dac3b4d}{int {\bfseries solve\-\_\-count}}\label{classSolver_a8bfe57e04a9266e094809eff9dac3b4d}
+
+\item 
+\hypertarget{classSolver_acce9bd07ac7b9867f61526fff4841e05}{int {\bfseries literal\-\_\-count}}\label{classSolver_acce9bd07ac7b9867f61526fff4841e05}
+
+\item 
+\hypertarget{classSolver_a5b8a47d0b6d3c369820e61508a31d0d8}{int {\bfseries clause\-\_\-cache\-\_\-hit\-\_\-count}}\label{classSolver_a5b8a47d0b6d3c369820e61508a31d0d8}
+
+\item 
+\hypertarget{classSolver_ab06796fb4247203c201e1f82665c90b1}{int {\bfseries cache\-\_\-hits}}\label{classSolver_ab06796fb4247203c201e1f82665c90b1}
+
+\item 
+\hypertarget{classSolver_abe0ba64278604bddcb509c184aa0c67f}{int {\bfseries solve\-\_\-time}}\label{classSolver_abe0ba64278604bddcb509c184aa0c67f}
+
+\item 
+\hypertarget{classSolver_ab06ffb6630a36974bc3739cbd9024cb1}{int {\bfseries imply\-\_\-time}}\label{classSolver_ab06ffb6630a36974bc3739cbd9024cb1}
+
+\item 
+\hypertarget{classSolver_aa704e3e86465b7a38f58f792d9ffdb6b}{int {\bfseries num\-\_\-imply}}\label{classSolver_aa704e3e86465b7a38f58f792d9ffdb6b}
+
+\item 
+\hypertarget{classSolver_ab36720ab77cd7abd075fd0aaf6e40f22}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries res}}\label{classSolver_ab36720ab77cd7abd075fd0aaf6e40f22}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolver_ace1aed02802f62c643a37b8a67e67bee}{class {\bfseries \-Interaction\-Manager}}\label{classSolver_ace1aed02802f62c643a37b8a67e67bee}
+
+\item 
+\hypertarget{classSolver_a16b09189cdaf88044be661f54a1313a7}{class {\bfseries \-Query\-Comparator}}\label{classSolver_a16b09189cdaf88044be661f54a1313a7}
+
+\item 
+\hypertarget{classSolver_a56fe9a9a7bc899066de30f41d508f524}{class {\bfseries \-Clause\-Solve}}\label{classSolver_a56fe9a9a7bc899066de30f41d508f524}
+
+\item 
+\hypertarget{classSolver_aa97b604ea37345da6b2414f0892e2664}{class {\bfseries \-Variable\-Eliminator}}\label{classSolver_aa97b604ea37345da6b2414f0892e2664}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+solver/\-Solver.\-h\item 
+solver/\-Solver.\-cpp\end{DoxyCompactItemize}

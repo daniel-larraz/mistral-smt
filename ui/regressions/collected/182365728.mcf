@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter0>0& it_counter0>=0& dupfd+it_counter0>2& (it_counter0 = 1| dupfd+it_counter0<=3)& !it_counter0 = 0)

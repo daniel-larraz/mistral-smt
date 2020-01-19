@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!host_key = 0& (field0_32(drf(host_key))>2| field0_32(drf(host_key))<0)& !0 = field0_32(drf(host_key)))

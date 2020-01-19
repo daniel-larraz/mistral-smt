@@ -1,0 +1,4 @@
+Type: solve
+Status: UNSAT
+(i<0 | i>=N | i%2!=0) & ((0<=k & k<N)->2k<size) & 2N>=size & k>=0 & N>=0  & 0<=i & i<N & i%2=0
+

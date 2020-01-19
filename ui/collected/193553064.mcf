@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!0 = field8_64(drf(pw))& !0 = Bunmodeled2(0)& length(drf(field8_64(drf(pw))))>0& 0 = array_1(drf(field8_64(drf(pw))), length(drf(field8_64(drf(pw)))))& length(drf(field8_64(drf(pw))))<field_minus_4_32(drf(field8_64(drf(pw))))& length(drf(field8_64(drf(pw))))>=0& field_minus_4_32(drf(field8_64(drf(pw))))>=0& !0 = Bunmodeled4(0)& 0 = array_4(drf(Bunmodeled4(0)), length(drf(Bunmodeled4(0))))& length(drf(Bunmodeled4(0)))>=0& length(drf(Bunmodeled4(0)))<field_minus_4_32(drf(Bunmodeled4(0)))& field_minus_4_32(drf(Bunmodeled4(0)))>=0& 0 = array_4(array_1(drf(Bunmodeled4(0)), 0), length(drf(Bunmodeled4(0)))))

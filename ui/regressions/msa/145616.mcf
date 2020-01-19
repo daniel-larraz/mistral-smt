@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!var_2 = 1& (d8>0| !unmodeled_val6:249 = 0)& !var_3 = 0& !var_5 = 0& !var_4 = 0& !unmodeled_val8 = 0& !d8 = 1& !argv = 0& !var_1 = 1)

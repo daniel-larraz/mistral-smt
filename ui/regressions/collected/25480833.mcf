@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(8channels_alloc=field_minus_4_32(drf(channels))& channels_alloc>=0& field_minus_4_32(drf(channels))>=0& (channels_alloc = 0| (!channels_alloc = 0& !channels = 0))& __t_sum16 = 0& ((!channels_alloc = 0& __t_sum17 = channels_alloc)| (channels_alloc = 0& __t_sum17 = 10))& __t_sum16>=0& __t_sum17>=0& __t_sum17<__t_sum16+__t_sum26& __t_sum26 = it_counter0:20:channel_new& __t_sum26>=0& it_counter0:20:channel_new>=0)

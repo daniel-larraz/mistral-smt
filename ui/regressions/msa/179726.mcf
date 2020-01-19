@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(d2 = 0& ((!argc = 2& !c = 104)| (!d1 = 0& argc = 2)| (argc = 2& d1 = 0& ((optind = 0& argc>N6:3:7+1)| (!optind = 0& argc>N6:3:7+optind))& ((!optind = 0& !var_1 = 104)| (optind = 0& !var_2 = 104))))& ((!argc = 2& !c = 118)| (!d1 = 0& argc = 2)| (argc = 2& d1 = 0& ((optind = 0& argc>N6:3:7+1)| (!optind = 0& argc>N6:3:7+optind))& ((!optind = 0& !var_1 = 118)| (optind = 0& !var_2 = 118)))))

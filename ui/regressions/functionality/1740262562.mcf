@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+hd(tl(a,i))=k&hd(tl(b,j))=m&a=b&i=j&!k=m

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(d0>=0& (-1 = array_4(type, i)| array_4(type, i) = field0_32(drf(key))| 0 = array_4(type, i)| (array_4(type, i)>=0& !array_4(type, i) = field0_32(drf(key))& !0 = array_4(type, i)& array_4(type, i)<=3))& d1>=0& (-1 = array_4(type, i)| array_4(type, i) = field0_32(drf(key))| 0 = array_4(type, i)| d0 = 0| d1 = 0)& (-1 = array_4(type, i)| array_4(type, i) = field0_32(drf(key))| 0 = array_4(type, i)| d0 = 0| (array_4(type, i)>=0& !array_4(type, i) = field0_32(drf(key))& !0 = array_4(type, i)& !d0 = 0)))

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter0>=0& it_counter-1>=0& Bunmodeled8(it_counter0)+1=Bunmodeled4(it_counter-1-1)& var_3_58 = it_counter0& 1 = Bunmodeled24(it_counter0)& Bunmodeled18(var_5_47) = Bunmodeled33(it_counter0)& Bunmodeled33(it_counter-1-1)+1=Bunmodeled15(it_counter0)& Bunmodeled1(var_5_8) = Bunmodeled32(it_counter0))

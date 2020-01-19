@@ -1,0 +1,541 @@
+
+
+(t=1 | t=2) & (t>=3)
+NC: ******
+false
+SC: ******
+false
+************
+
+
+(t=1 | t=2) & (t=x)
+NC: ******
+(x = 2| x = 1)
+SC: ******
+false
+************
+
+
+(t=1 | t=2) & (t<=x & x<=8)
+NC: ******
+(-x+1<=0& x<=8)
+SC: ******
+false
+************
+
+
+(t=1 | t=2) & (t<=x & x<=0)
+NC: ******
+false
+SC: ******
+false
+************
+
+
+(t=1 | t=2) & t=2x+y
+NC: ******
+(2=2x+y| 2x+y=1)
+SC: ******
+false
+************
+
+
+f(f(a,x),x) = 3 & f(b,x)=d
+NC: ******
+(f(f(a, x), x) = 3& d = f(b, x))
+SC: ******
+(f(f(a, x), x) = 3& d = f(b, x))
+************
+
+
+f(f(a,t),t) = 3 & f(b,t)=d
+NC: ******
+(d = 3| !d = a| !b = a)
+SC: ******
+false
+************
+
+
+s1 = f(z1,t) & s2=f(z2,t) & w=f(f(y1,t),f(y2,t))
+NC: ******
+(((!z1 = y2& ((!y1 = z2& w = f(s1, s2)& (!y1 = y2| s1 = s2))| (!y1 = z1& (!y1 = z2| w = f(s2, s2)))))| ((w = f(s1, s2)| (!y1 = z1& !y1 = z2))& s1 = s2)| (!z2 = y2& ((!y1 = z2& w = f(s1, s1))| (!z1 = y2& (!y1 = z1| !y1 = z2| s1 = s2))| (!y1 = z1& (!y1 = z2| w = f(s2, s1))))))& (!z2 = z1| s1 = s2))
+SC: ******
+false
+************
+
+
+s1=f(z1,t) & w=f(f(y1,t),f(y2,t))
+NC: ******
+(w = f(s1, s1)| !y1 = z1| !y1 = y2)
+SC: ******
+false
+************
+
+
+w=f(t2,t0) & y1=y2->t2=t0 & y2=z1->s=t0
+NC: ******
+(w = f(s, s)| !y2 = z1| !y1 = y2)
+SC: ******
+false
+************
+
+
+w=f(t2,t0) & y1=y2->t2=t0 & y2=z1->s=t0
+NC: ******
+(!y2 = z1| !y1 = y2| w = f(s, s))
+SC: ******
+false
+************
+
+
+w=f(t2,t0) & y1=y2->t2=t0 & y2=z1->s=t0
+NC: ******
+(!y1 = y2| w = f(s, s)| !z1 = y2)
+SC: ******
+false
+************
+
+
+ w=f(t2,t0) & y1=y2->t2=t0 & y2=z1->t1=t0 & y1=z1->t2=t1 & t1=s
+NC: ******
+(w = f(s, s)| !z1 = y1| !z1 = y2)
+SC: ******
+false
+************
+
+
+w=f(t0,t3) & y1=y2->t0=t3 & y2=z1->t=t3 & y1=z1->t0=t & t=s
+NC: ******
+(w = f(s, s)| !y2 = y1| !y2 = z1)
+SC: ******
+false
+************
+
+
+((t2 = t1| !y2 = z1)& t1 = s1& w = f(t0, t2)& (t0 = t2| !y2 = y1)& (t0 = t1| !y1 = z1))
+NC: ******
+(!y1 = y2| w = f(s1, s1)| !z1 = y2)
+SC: ******
+false
+************
+
+
+((t2 = t1| !y2 = z1)& t1 = s1& w = f(t0, t2)& (t0 = t2| !y2 = y1)& (t0 = t1| !y1 = z1))
+NC: ******
+(w = f(s1, s1)| !y2 = y1| !y2 = z1)
+SC: ******
+false
+************
+
+
+s1 = f(z1,t) & s2=f(z1,t) & w=f(f(y1,t),f(y2,t))
+NC: ******
+((!z1 = y1| !y2 = y1| w = f(s1, s1))& s1 = s2)
+SC: ******
+false
+************
+
+
+s1 = f(z1,t) & s1=f(z2,t) & w=f(f(y1,t),f(y2,t))
+NC: ******
+(w = f(s1, s1)| (!z1 = y2& !z2 = y2)| (!z1 = y1& !z2 = y1))
+SC: ******
+false
+************
+
+
+x+t=2
+NC: ******
+true
+SC: ******
+false
+************
+
+
+x+2t=2
+NC: ******
+x%2=0
+SC: ******
+false
+************
+
+
+3x+3t=3
+NC: ******
+true
+SC: ******
+false
+************
+
+
+x+2t=3 & x+y+t<=4
+NC: ******
+(x+2y<=5& x+1%2=0)
+SC: ******
+false
+************
+
+
+x+2t=3 & t>=4
+NC: ******
+(x+1%2=0& x+5<=0)
+SC: ******
+false
+************
+
+
+x+2t<=4 & x+y+t>=2
+NC: ******
+-x-2y<=0
+SC: ******
+false
+************
+
+
+x+2t>=2 & x+y+t<=1
+NC: ******
+((x+2y+1<=0& x+1%2=0)| (x+2y<=0& x%2=0))
+SC: ******
+false
+************
+
+
+y=f(a+t)-f(b+t)
+NC: ******
+(!a = b| y = 0)
+SC: ******
+(a = b& y = 0)
+************
+
+
+y=f(a+t)-f(b+t) & a=b
+NC: ******
+((y = 0| !b = a)& b = a)
+SC: ******
+(y = 0& b = a)
+************
+
+
+y=f(a+t)-f(b+t) & a+b=2 & b=1
+NC: ******
+(b = 1& (y = 0| !a = b)& b+a=2)
+SC: ******
+(y = 0& b = 1& b+a=2)
+************
+
+
+y=f(a+t)-f(2b+t) 
+NC: ******
+(y = 0| !2b=a)
+SC: ******
+(y = 0& 2b=a)
+************
+
+
+x!=t
+NC: ******
+true
+SC: ******
+false
+************
+
+
+x+2t=3 & t>=4 & y+2t=4
+NC: ******
+(x+5<=0& x+1%2=0& y=x+1)
+SC: ******
+false
+************
+
+
+x+2t=3 & t>=4 & y+2t=4
+NC: ******
+(x+1%2=0& x+5<=0& +y=x+1)
+SC: ******
+false
+************
+
+
+x<=t & t <=y & x%2=0
+NC: ******
+(x%2=0& -y+x<=0)
+SC: ******
+false
+************
+
+
+x<=2t & t <=y & x%2=0
+NC: ******
+(x%2=0& x-2y<=0)
+SC: ******
+false
+************
+
+
+x+y<=2t & 2t <=y-x & x%2=0
+NC: ******
+(((2x<=0& x+y%2=0)| 2x+1<=0)& x%2=0)
+SC: ******
+false
+************
+
+
+x+t%3=0 & x>=1 & t>=0 & t<=1
+NC: ******
+-x+1<=0
+SC: ******
+false
+************
+
+
+f(t)!=2 | x=f(t)
+NC: ******
+true
+SC: ******
+x = 2
+************
+
+
+(t=1 | t=2) | (t!=x)
+NC: ******
+true
+SC: ******
+(x = 2| x = 1)
+************
+
+
+
+
+(3<x+2t | 2x+t<3) 
+NC: ******
+true
+SC: ******
+3x<=2
+************
+
+
+(3<x+2t | 2x+t<3) 
+NC: ******
+true
+SC: ******
+3x<=2
+************
+
+
+x=2t & t<x
+NC: ******
+(x%2=0& -3x+2<=0)
+SC: ******
+false
+************
+
+
+2x+3t=7 & x<t
+NC: ******
+(5x<=4& 2x+2%3=0)
+SC: ******
+false
+************
+
+
+2x+3t=7 & t<x
+NC: ******
+(2x+2%3=0& -5x+10<=0)
+SC: ******
+false
+************
+
+
+2x+3t=7 & x<t & x>0 & t>0
+NC: ******
+false
+SC: ******
+false
+************
+
+
+3x+3t<8 & 8<3x+2t
+NC: ******
+-3x+13<=0
+SC: ******
+false
+************
+
+
+3t+3y<8 & 8<3t+2y
+NC: ******
+y+3<=0
+SC: ******
+false
+************
+
+
+3t2+1%2=0
+NC: ******
+true
+SC: ******
+false
+************
+
+
+x=2t & x=3t
+NC: ******
+x = 0
+SC: ******
+false
+************
+
+
+x=2t1 & x=3t2
+NC: ******
+(x%2=0& x%3=0)
+SC: ******
+false
+************
+
+
+y=3t1+3t2
+NC: ******
+y%3=0
+SC: ******
+false
+************
+
+
+y+1=3t1+3t2
+NC: ******
+y+1%3=0
+SC: ******
+false
+************
+
+
+x+t%3=0
+NC: ******
+true
+SC: ******
+false
+************
+
+
+y=3t1+3t2+1
+NC: ******
+y+2%3=0
+SC: ******
+false
+************
+
+
+x<y & x!=t & y>t+1
+NC: ******
+x-y+1<=0
+SC: ******
+false
+************
+
+
+x!=t & y>=t & y<=t
+NC: ******
+(-x+y+1<=0| x-y+1<=0)
+SC: ******
+false
+************
+
+
+x!=t+1 & y>=t+1 & y<=t+1
+NC: ******
+(x-y+1<=0| -x+y+1<=0)
+SC: ******
+false
+************
+
+
+(i<0 | i>= N) & i=0 & ( ((0<=k & k<N)->k<size) & N>=size) &k>=0 & size>0
+NC: ******
+((N-i<=0| i+1<=0)& (k+1<=0| k-size+1<=0| N-k<=0)& -size+1<=0& i = 0& -k<=0& -N+size<=0)
+SC: ******
+((N-i<=0| i+1<=0)& (k+1<=0| k-size+1<=0| N-k<=0)& -size+1<=0& i = 0& -k<=0& -N+size<=0)
+************
+
+
+t=0 & j=t+1
+NC: ******
+j = 1
+SC: ******
+false
+************
+
+
+t-N3+1<=0&2t+i=i1&+j0=2t+i
+NC: ******
+(-2N3+j0-i+2<=0& i1 = j0& -j0+i%2=0)
+SC: ******
+false
+************
+
+
+(+t=fshift10+f10& fshift10 = 0& ifooloop7-sizefooloop7+1<=0& !arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(bfooloop7), f10fooloop7)& +f10fooloop7=ifooloop7+2k7fooloop7& sizefooloop7 = size& ((size-2N3<=0& ifooloop7 = m)| (-size+2N3+1<=0& +ifooloop7=2N3))& k7foo = k7fooloop7& f10fooloop7 = f10& arrayref(drf(bfooloop7), f10fooloop7) = arrayref(drf(b), t)& (((size<=0| !fshift10+f10%2=0| fshift10+f10+1<=0)& +t=fshift10+f10& fshift10 = 0& arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(a), t))| (-size+1<=0& -fshift10-f10<=0& fshift10+f10%2=0& +t=fshift10+f10& -2N3+fshift10+f10+2<=0& +fshift10+f10=f4& fshift10 = 0& arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(b), f4))))
+NC: ******
+(((arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(b), f4)& fshift10+f10%2=0& fshift10 = 0& -size+1<=0& -fshift10-f10<=0& -2N3+fshift10+f10+2<=0& +fshift10+f10=f4)| ((fshift10+f10+1<=0| size<=0| !fshift10+f10%2=0)& fshift10 = 0& arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(a), fshift10+f10)))& k7fooloop7 = k7foo& f10fooloop7 = f10& f10fooloop7=2k7fooloop7+ifooloop7& sizefooloop7 = size& ((ifooloop7 = m& size-2N3<=0)| (-size+2N3+1<=0& +ifooloop7=2N3))& ifooloop7-sizefooloop7+1<=0& fshift10 = 0& !arrayref(drf(afooloop7), f10fooloop7) = arrayref(drf(bfooloop7), f10fooloop7)& arrayref(drf(b), fshift10+f10) = arrayref(drf(bfooloop7), f10fooloop7))
+SC: ******
+false
+************
+
+
+
+
+(!arrayref(drf(afooloop7), -fshift11+ffinal11) = arrayref(drf(bfooloop7), -fshift11+ffinal11)& arrayref(drf(bfooloop7), -fshift11+ffinal11) = arrayref(drf(b), ffinal11)& +ffinal11=fshift11+ifooloop7+2k7fooloop7& fshift11 = 0& ifooloop7-sizefooloop7+1<=0& sizefooloop7 = size& ((-size+2N3+1<=0& +ifooloop7=2N3)| (size-2N3<=0& ifooloop7 = m))& k7foo = k7fooloop7& ((fshift11 = 0& arrayref(drf(afooloop7), -fshift11+ffinal11) = arrayref(drf(a), ffinal11)& (size<=0| ffinal11+1<=0| !ffinal11%2=0))| (-size+1<=0& fshift11 = 0& ffinal11%2=0& ffinal11 = t4& -ffinal11<=0& -2N3+ffinal11+2<=0& arrayref(drf(afooloop7), -fshift11+ffinal11) = arrayref(drf(b), t4))))
+NC: ******
+(+ffinal11=ifooloop7+2k7fooloop7+fshift11& sizefooloop7 = size& arrayref(drf(bfooloop7), ffinal11-fshift11) = arrayref(drf(b), ffinal11)& ((ifooloop7=2N3& ((arrayref(drf(afooloop7), ffinal11-fshift11) = arrayref(drf(b), ffinal11)& -2N3+ffinal11+2<=0& -ffinal11<=0& ffinal11%2=0& -size+1<=0& fshift11 = 0)| ((!ffinal11%2=0| ffinal11+1<=0| size<=0)& arrayref(drf(a), ffinal11) = arrayref(drf(afooloop7), ffinal11-fshift11)& fshift11 = 0))& 2N3-size+1<=0)| (ifooloop7 = m& ((arrayref(drf(afooloop7), ffinal11-fshift11) = arrayref(drf(b), ffinal11)& -2N3+ffinal11+2<=0& -ffinal11<=0& ffinal11%2=0& -size+1<=0& fshift11 = 0)| ((!ffinal11%2=0| ffinal11+1<=0| size<=0)& arrayref(drf(a), ffinal11) = arrayref(drf(afooloop7), ffinal11-fshift11)& fshift11 = 0))& -2N3+size<=0))& ifooloop7-sizefooloop7+1<=0& k7foo = k7fooloop7& fshift11 = 0& !arrayref(drf(afooloop7), ffinal11-fshift11) = arrayref(drf(bfooloop7), ffinal11-fshift11))
+SC: ******
+(+ffinal11=ifooloop7+2k7fooloop7+fshift11& (!ffinal11%2=0| ffinal11+1<=0| size<=0)& ((ifooloop7 = m& -2N3+size<=0)| (ifooloop7=2N3& 2N3-size+1<=0))& sizefooloop7 = size& arrayref(drf(a), ffinal11) = arrayref(drf(afooloop7), ffinal11-fshift11)& arrayref(drf(bfooloop7), ffinal11-fshift11) = arrayref(drf(b), ffinal11)& ifooloop7-sizefooloop7+1<=0& k7foo = k7fooloop7& fshift11 = 0& !arrayref(drf(afooloop7), ffinal11-fshift11) = arrayref(drf(bfooloop7), ffinal11-fshift11))
+************
+
+
+(size = t3& !f(b, t3-size) = f(b, 0))
+NC: ******
+false
+SC: ******
+false
+************
+
+
+(f(b, 0) != f(b, t1) & t2 = -size & t1=t2+t3 & t3 = size)
+NC: ******
+false
+SC: ******
+false
+************
+
+
+f(a, 0) = f(b, t1) & t2 = -size & t1=t2+t3 & t3 = size
+NC: ******
+f(b, 0) = f(a, 0)
+SC: ******
+false
+************
+
+
+f(a, 0) != f(b, t1) & t2 = -size & t1=t2+t3 & t3 = size
+NC: ******
+!f(a, 0) = f(b, 0)
+SC: ******
+false
+************
+
+
+(!d1 = 0& d2 = 0& ((t-argc+2<=0& optind = 0& (size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1| !arrayref(drf(arrayref(drf(argv), t+2)), 0) = 118))| (!optind = 0& -argc+1<=0& optind+t-argc+1<=0& (size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1| !arrayref(drf(arrayref(drf(argv), optind+t+1)), 0) = 118)))& ((!optind = 0& size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1)| (optind = 0& !arrayref(drf(arrayref(drf(argv), t+2)), 0) = 55)| (optind = 0& size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1)| (!optind = 0& !arrayref(drf(arrayref(drf(argv), optind+t+1)), 0) = 55))& ((!optind = 0& size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1)| (optind = 0& size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1)| (optind = 0& !arrayref(drf(arrayref(drf(argv), t+2)), 0) = 112)| (!optind = 0& !arrayref(drf(arrayref(drf(argv), optind+t+1)), 0) = 112)))
+
+NC: ******
+((-argc+1<=0| optind = 0)& !d1 = 0& d2 = 0)
+SC: ******
+false
+************
+
+
+(d2 = 0& ((optind = 0& (size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1| !112 = arrayref(drf(arrayref(drf(argv), t+2)), 0))& -argc+t+2<=0)| (optind-argc+t+1<=0& -argc+1<=0& !optind = 0& (size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1| !112 = arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))))& !d1 = 0& ((optind = 0& !arrayref(drf(arrayref(drf(argv), t+2)), 0) = 55)| (optind = 0& size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1)| (!optind = 0& !arrayref(drf(arrayref(drf(argv), optind+t+1)), 0) = 55)| (size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1& !optind = 0))& ((optind = 0& size(arrayref(drf(arrayref(drf(argv), t+2)), 0))<=1)| (optind = 0& !arrayref(drf(arrayref(drf(argv), t+2)), 0) = 118)| (size(arrayref(drf(arrayref(drf(argv), optind+t+1)), 0))<=1& !optind = 0)| (!optind = 0& !arrayref(drf(arrayref(drf(argv), optind+t+1)), 0) = 118)))
+NC: ******
+(!d1 = 0& d2 = 0& (optind = 0| -argc+1<=0))
+SC: ******
+false
+************

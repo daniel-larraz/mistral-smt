@@ -1,0 +1,266 @@
+\hypertarget{classCNode}{\section{\-C\-Node \-Class \-Reference}
+\label{classCNode}\index{\-C\-Node@{\-C\-Node}}
+}
+\-Inheritance diagram for \-C\-Node\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCNode}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries refactor\-\_\-lessthan}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a160d72ba87c7daee766f2a4386a25e48}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-simplification} (simplification\-\_\-level min\-\_\-level)}\label{classCNode_a160d72ba87c7daee766f2a4386a25e48}
+
+\item 
+\hypertarget{classCNode_abc5894d98b671e977d7659b42fd65176}{void {\bfseries set\-\_\-simplification} (\hyperlink{classCNode}{\-C\-Node} $\ast$simplified\-\_\-node, simplification\-\_\-level level)}\label{classCNode_abc5894d98b671e977d7659b42fd65176}
+
+\item 
+\hypertarget{classCNode_ae815e6683207015e30dcd66104e02434}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries refactor} ()}\label{classCNode_ae815e6683207015e30dcd66104e02434}
+
+\item 
+\hypertarget{classCNode_a890c35e430066c0c1e88e9918f9cafca}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries make\-\_\-canonical} ()}\label{classCNode_a890c35e430066c0c1e88e9918f9cafca}
+
+\item 
+\hypertarget{classCNode_a7765b18fe194fb0fb07e9bdf98d70889}{bool {\bfseries check\-\_\-canonical} ()}\label{classCNode_a7765b18fe194fb0fb07e9bdf98d70889}
+
+\item 
+\hypertarget{classCNode_a5e5ce9b83eea3a92484e1ba930067580}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-attribute\-\_\-constraints} ()}\label{classCNode_a5e5ce9b83eea3a92484e1ba930067580}
+
+\item 
+\hypertarget{classCNode_a2a8156e96d3621d58bfe43cc91d7aa8a}{virtual \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&subs)=0}\label{classCNode_a2a8156e96d3621d58bfe43cc91d7aa8a}
+
+\item 
+\hypertarget{classCNode_aaca668f2d986e480599bd69adeeeea39}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (\hyperlink{classTerm}{\-Term} $\ast$($\ast$sub\-\_\-func)(\hyperlink{classTerm}{\-Term} $\ast$t))}\label{classCNode_aaca668f2d986e480599bd69adeeeea39}
+
+\item 
+\hypertarget{classCNode_aa6c73cd96659f601a7477f1faad7affc}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (\hyperlink{classTerm}{\-Term} $\ast$t1, \hyperlink{classTerm}{\-Term} $\ast$t2)}\label{classCNode_aa6c73cd96659f601a7477f1faad7affc}
+
+\item 
+\hypertarget{classCNode_a05a2e1e7856e0dd08bfcdbeb931b3314}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (\hyperlink{classTerm}{\-Term} $\ast$($\ast$sub\-\_\-func)(\hyperlink{classTerm}{\-Term} $\ast$t, void $\ast$data), void $\ast$my\-\_\-data)}\label{classCNode_a05a2e1e7856e0dd08bfcdbeb931b3314}
+
+\item 
+\hypertarget{classCNode_a1d307f77bff582d014e8744f01dd3590}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (map$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$, \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ \&subs)}\label{classCNode_a1d307f77bff582d014e8744f01dd3590}
+
+\item 
+\hypertarget{classCNode_aa05994b70eb79ef5e710d9701915ddea}{cnode\-\_\-type {\bfseries get\-\_\-type} () const }\label{classCNode_aa05994b70eb79ef5e710d9701915ddea}
+
+\item 
+\hypertarget{classCNode_a7aa6de21240ebf7cc484eb4758c99d77}{virtual bool {\bfseries operator==} (const \hyperlink{classCNode}{\-C\-Node} \&other)=0}\label{classCNode_a7aa6de21240ebf7cc484eb4758c99d77}
+
+\item 
+\hypertarget{classCNode_a306eb6bd36cdd5ae4d792b6707bb638c}{virtual string {\bfseries to\-\_\-string} ()=0}\label{classCNode_a306eb6bd36cdd5ae4d792b6707bb638c}
+
+\item 
+\hypertarget{classCNode_a44d94a128de88cbe26383459cc4473b3}{string {\bfseries to\-\_\-prefix\-\_\-notation} ()}\label{classCNode_a44d94a128de88cbe26383459cc4473b3}
+
+\item 
+\hypertarget{classCNode_a27715dd1f5669edcb611e50504043b7f}{bool {\bfseries is\-\_\-leaf} () const }\label{classCNode_a27715dd1f5669edcb611e50504043b7f}
+
+\item 
+\hypertarget{classCNode_a85bb30e59b95ddcf540d95c343496d35}{bool {\bfseries is\-\_\-literal} () const }\label{classCNode_a85bb30e59b95ddcf540d95c343496d35}
+
+\item 
+\hypertarget{classCNode_a7160054b9009ac754adf939fcede2c06}{bool {\bfseries is\-\_\-connective} () const }\label{classCNode_a7160054b9009ac754adf939fcede2c06}
+
+\item 
+\hypertarget{classCNode_a9f8ba18507cf325f16c27aefb2f08144}{bool {\bfseries is\-\_\-conjunct} () const }\label{classCNode_a9f8ba18507cf325f16c27aefb2f08144}
+
+\item 
+\hypertarget{classCNode_a844e27e25a8922209ff1692ae6176dc5}{bool {\bfseries is\-\_\-disjunct} () const }\label{classCNode_a844e27e25a8922209ff1692ae6176dc5}
+
+\item 
+\hypertarget{classCNode_a9cb25629fb582727223b4f7375229b2a}{bool {\bfseries has\-\_\-quantifier} () const }\label{classCNode_a9cb25629fb582727223b4f7375229b2a}
+
+\item 
+\hypertarget{classCNode_aeba7734a7bf98f7dd0c2555854cb7b77}{bool {\bfseries contains\-\_\-inequality} ()}\label{classCNode_aeba7734a7bf98f7dd0c2555854cb7b77}
+
+\item 
+\hypertarget{classCNode_ab501fd73558903d8acf3929edf125db1}{bool {\bfseries is\-\_\-constant} () const }\label{classCNode_ab501fd73558903d8acf3929edf125db1}
+
+\item 
+\hypertarget{classCNode_a35776e5a7020e14f06e2538f3ddb949b}{size\-\_\-t {\bfseries hash\-\_\-code} ()}\label{classCNode_a35776e5a7020e14f06e2538f3ddb949b}
+
+\item 
+\hypertarget{classCNode_acb109c93cc7db248648a32f9edc7004c}{void {\bfseries get\-\_\-vars} (set$<$ string $>$ \&vars)}\label{classCNode_acb109c93cc7db248648a32f9edc7004c}
+
+\item 
+\hypertarget{classCNode_a67e5a06823614885686a1b4742eeafec}{void {\bfseries get\-\_\-vars} (set$<$ int $>$ \&vars)}\label{classCNode_a67e5a06823614885686a1b4742eeafec}
+
+\item 
+\hypertarget{classCNode_a68ada4c5f7820ef613f2c0e28ec0ac10}{void {\bfseries get\-\_\-vars} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&vars)}\label{classCNode_a68ada4c5f7820ef613f2c0e28ec0ac10}
+
+\item 
+\hypertarget{classCNode_aa0a9793c7cc5d1f91c85e00e1138a4f8}{bool {\bfseries contains\-\_\-var} (int var\-\_\-id)}\label{classCNode_aa0a9793c7cc5d1f91c85e00e1138a4f8}
+
+\item 
+\hypertarget{classCNode_a10164153f252916e456e055c316d47a5}{bool {\bfseries contains\-\_\-term} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classCNode_a10164153f252916e456e055c316d47a5}
+
+\item 
+\hypertarget{classCNode_a156bf58e215ebbdaac842f00b5e63918}{bool {\bfseries contains\-\_\-term} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&terms)}\label{classCNode_a156bf58e215ebbdaac842f00b5e63918}
+
+\item 
+\hypertarget{classCNode_a58ba20cf8663d331e3d673663aaaea3a}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries rename\-\_\-variable} (int old\-\_\-var\-\_\-id, int new\-\_\-var\-\_\-id)}\label{classCNode_a58ba20cf8663d331e3d673663aaaea3a}
+
+\item 
+\hypertarget{classCNode_aa25a2fba15e7aeb52174407a93aa4896}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries rename\-\_\-variables} (map$<$ int, int $>$ \&replacements)}\label{classCNode_aa25a2fba15e7aeb52174407a93aa4896}
+
+\item 
+\hypertarget{classCNode_a4e8f06ac7ad1d2bda0bb78fccc74d2aa}{void {\bfseries get\-\_\-nested\-\_\-terms} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&terms, bool include\-\_\-function\-\_\-subterms, bool include\-\_\-constants=true)}\label{classCNode_a4e8f06ac7ad1d2bda0bb78fccc74d2aa}
+
+\item 
+\hypertarget{classCNode_af8d20473d1835212ab5d5cfd1f4773af}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries add\-\_\-attributes} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ $\ast$which\-\_\-terms=\-N\-U\-L\-L)}\label{classCNode_af8d20473d1835212ab5d5cfd1f4773af}
+
+\item 
+\hypertarget{classCNode_a2b96f8c546f271a2d8843369fca71cfc}{\hyperlink{classTerm}{\-Term} $\ast$ {\bfseries contains\-\_\-term\-\_\-equality} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classCNode_a2b96f8c546f271a2d8843369fca71cfc}
+
+\item 
+\hypertarget{classCNode_a1cc071b0fb85fc2c20fb3d502fdb5525}{void {\bfseries collect\-\_\-term\-\_\-equalities} (\hyperlink{classTerm}{\-Term} $\ast$t, set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&eqs)}\label{classCNode_a1cc071b0fb85fc2c20fb3d502fdb5525}
+
+\item 
+\hypertarget{classCNode_af1397150f71cdaeb70178322fdbb668f}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries replace\-\_\-leaves\-\_\-containing\-\_\-term} (\hyperlink{classTerm}{\-Term} $\ast$t, \hyperlink{classCNode}{\-C\-Node} $\ast$replacement)}\label{classCNode_af1397150f71cdaeb70178322fdbb668f}
+
+\item 
+\hypertarget{classCNode_a515775fb290af1c3592e607caa57641a}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries replace} (\hyperlink{classCNode}{\-C\-Node} $\ast$orig, \hyperlink{classCNode}{\-C\-Node} $\ast$replacement)}\label{classCNode_a515775fb290af1c3592e607caa57641a}
+
+\item 
+\hypertarget{classCNode_a91b43fd7e7aea2c5b0f05aece82b97d1}{int {\bfseries num\-\_\-leaves\-\_\-containing\-\_\-term} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classCNode_a91b43fd7e7aea2c5b0f05aece82b97d1}
+
+\item 
+\hypertarget{classCNode_ab76c3b160eaf38f42660f9b7c58d075c}{void {\bfseries get\-\_\-all\-\_\-literals} (set$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ \&literals)}\label{classCNode_ab76c3b160eaf38f42660f9b7c58d075c}
+
+\item 
+\hypertarget{classCNode_afca74e7e830916abcc11e16c71a6f38e}{void {\bfseries get\-\_\-all\-\_\-leaves} (set$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ \&leaves)}\label{classCNode_afca74e7e830916abcc11e16c71a6f38e}
+
+\item 
+\hypertarget{classCNode_aa8f4b9b400fc9d2c5db0d81e63541522}{void {\bfseries get\-\_\-literals\-\_\-containing\-\_\-term} (\hyperlink{classTerm}{\-Term} $\ast$t, set$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ \&leaves)}\label{classCNode_aa8f4b9b400fc9d2c5db0d81e63541522}
+
+\item 
+\hypertarget{classCNode_ab4aff7ed0f90db7af3a89f37fd8f0c55}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries fold\-\_\-negated\-\_\-ilps} ()}\label{classCNode_ab4aff7ed0f90db7af3a89f37fd8f0c55}
+
+\item 
+\hypertarget{classCNode_ab1bdf2d02417c0e468cf30ba73c9fe4a}{int {\bfseries get\-\_\-size} ()}\label{classCNode_ab1bdf2d02417c0e468cf30ba73c9fe4a}
+
+\item 
+\hypertarget{classCNode_ab333c2f0b29753e4f627ce5576d317e0}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries evaluate\-\_\-assignment} (map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ \&assignment)}\label{classCNode_ab333c2f0b29753e4f627ce5576d317e0}
+
+\item 
+\hypertarget{classCNode_aff2111bfcd019bc2f7224d44b9482eb6}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries evaluate\-\_\-assignment} (map$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$, bool $>$ \&assignments)}\label{classCNode_aff2111bfcd019bc2f7224d44b9482eb6}
+
+\item 
+\hypertarget{classCNode_a44103c28feda4d67c50b0f91160b1086}{void {\bfseries get\-\_\-all\-\_\-fun\-\_\-ids} (set$<$ int $>$ \&ids)}\label{classCNode_a44103c28feda4d67c50b0f91160b1086}
+
+\item 
+\hypertarget{classCNode_aab0f2a0f52799a112e1d99d4c175a60f}{void {\bfseries get\-\_\-all\-\_\-arguments} (int fun\-\_\-id, int arg\-\_\-num, set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&args)}\label{classCNode_aab0f2a0f52799a112e1d99d4c175a60f}
+
+\item 
+\hypertarget{classCNode_ab3e3c17251ab4a317677da0cda2ef9fa}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries replace\-\_\-first\-\_\-argument} (map$<$ int, \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&fun\-\_\-id\-\_\-to\-\_\-replacement)}\label{classCNode_ab3e3c17251ab4a317677da0cda2ef9fa}
+
+\item 
+\hypertarget{classCNode_a6afbddb17f377f9d79c94eb819fcbe2a}{void {\bfseries get\-\_\-all\-\_\-first\-\_\-arguments} (set$<$ int $>$ \&fn\-\_\-ids, map$<$ int, set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ $>$ \&fn\-\_\-id\-\_\-to\-\_\-first\-\_\-arg)}\label{classCNode_a6afbddb17f377f9d79c94eb819fcbe2a}
+
+\item 
+\hypertarget{classCNode_a24fdd41a897f711b7bce2e7888b4ec28}{void {\bfseries get\-\_\-all\-\_\-ilp\-\_\-terms} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&ilp\-\_\-terms)}\label{classCNode_a24fdd41a897f711b7bce2e7888b4ec28}
+
+\item 
+\hypertarget{classCNode_a9cc7a165f14dd649110364501a58ed53}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries rewrite\-\_\-ilp\-\_\-neqs} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&ilp\-\_\-terms)}\label{classCNode_a9cc7a165f14dd649110364501a58ed53}
+
+\item 
+\hypertarget{classCNode_ab0cccd12453d30cc82776b52a53f75e9}{virtual \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries divide} (long int c, \hyperlink{classTerm}{\-Term} $\ast$t)}\label{classCNode_ab0cccd12453d30cc82776b52a53f75e9}
+
+\item 
+\hypertarget{classCNode_ab5de02af9464fdca7434f0b037bbf159}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries to\-\_\-cnf} ()}\label{classCNode_ab5de02af9464fdca7434f0b037bbf159}
+
+\item 
+\hypertarget{classCNode_a3103fd0a931004f3615ab72770ac3e58}{int {\bfseries num\-\_\-disjuncts} ()}\label{classCNode_a3103fd0a931004f3615ab72770ac3e58}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a586a4efdbfe15ab6140b2a29da4b23a3}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries uniquify\-\_\-cnode} (\hyperlink{classCNode}{\-C\-Node} $\ast$node)}\label{classCNode_a586a4efdbfe15ab6140b2a29da4b23a3}
+
+\item 
+\hypertarget{classCNode_a5424ede8b98eed39f3470beb1107ed18}{static \hyperlink{classVarMap}{\-Var\-Map} \& {\bfseries get\-\_\-varmap} ()}\label{classCNode_a5424ede8b98eed39f3470beb1107ed18}
+
+\item 
+\hypertarget{classCNode_a7d36f97ba44a57e7e804ce49a14b3db8}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries true\-\_\-node} ()}\label{classCNode_a7d36f97ba44a57e7e804ce49a14b3db8}
+
+\item 
+\hypertarget{classCNode_a0baf0dcb51794b19a3a68f943e30b7de}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries false\-\_\-node} ()}\label{classCNode_a0baf0dcb51794b19a3a68f943e30b7de}
+
+\item 
+\hypertarget{classCNode_a3b71a2491bfdfa359149afd2561cb71c}{static void {\bfseries clear} ()}\label{classCNode_a3b71a2491bfdfa359149afd2561cb71c}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_aaee3fb295c130439701174a7515fad65}{size\-\_\-t {\bfseries hash\-\_\-c}}\label{classCNode_aaee3fb295c130439701174a7515fad65}
+
+\item 
+\hypertarget{classCNode_aa50d2210f7eee39e9bc7ed2953bec1ca}{cnode\-\_\-type {\bfseries node\-\_\-type}}\label{classCNode_aa50d2210f7eee39e9bc7ed2953bec1ca}
+
+\item 
+\hypertarget{classCNode_a411be485406f9bf1246758f5a3c59d69}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries negations\-\_\-folded}}\label{classCNode_a411be485406f9bf1246758f5a3c59d69}
+
+\item 
+\hypertarget{classCNode_a4cab46ea67148a730497a6b38179360e}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries negation}}\label{classCNode_a4cab46ea67148a730497a6b38179360e}
+
+\item 
+\hypertarget{classCNode_a5a22b508edc17fb622e0ec4a4118a55a}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries factorization}}\label{classCNode_a5a22b508edc17fb622e0ec4a4118a55a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a2e4ce67a4b7e4e29c86d0228b8828e9f}{static \hyperlink{classVarMap}{\-Var\-Map} {\bfseries vm}}\label{classCNode_a2e4ce67a4b7e4e29c86d0228b8828e9f}
+
+\item 
+\hypertarget{classCNode_aa013d9c147078efa7511d4de02ccd7cd}{static unordered\-\_\-set$<$ \hyperlink{classCNode}{\-C\-Node} \*
+$\ast$, std\-::hash$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$\*
+, \hyperlink{structnode__eq}{node\-\_\-eq} $>$ {\bfseries nodes}}\label{classCNode_aa013d9c147078efa7511d4de02ccd7cd}
+
+\item 
+\hypertarget{classCNode_ae583b3d666a1b849e7dd5e654d8ebcb0}{static bool {\bfseries delete\-\_\-nodes} = true}\label{classCNode_ae583b3d666a1b849e7dd5e654d8ebcb0}
+
+\item 
+\hypertarget{classCNode_a12e1e19d4e274fc279e0db7ebf9b1d12}{static unordered\-\_\-map$<$ pair\*
+$<$ int, \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$, \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ {\bfseries simp\-\_\-map}}\label{classCNode_a12e1e19d4e274fc279e0db7ebf9b1d12}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a16e4c5d20cb9176c9b31e269a7e37c47}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-node} (\hyperlink{classCNode}{\-C\-Node} $\ast$node)}\label{classCNode_a16e4c5d20cb9176c9b31e269a7e37c47}
+
+\item 
+\hypertarget{classCNode_a35b99bd090070bb2b6c9560d78773808}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries uniquify\-\_\-cnode\-\_\-rec} (\hyperlink{classCNode}{\-C\-Node} $\ast$node)}\label{classCNode_a35b99bd090070bb2b6c9560d78773808}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a74efc8365bd9706fe45d4adfbbfab2ea}{static set$<$ \hyperlink{classCNode}{\-C\-Node} $\ast$ $>$ {\bfseries to\-\_\-delete}}\label{classCNode_a74efc8365bd9706fe45d4adfbbfab2ea}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCNode_a93def3190d5eacce69517079e5886ec2}{class {\bfseries \-Term}}\label{classCNode_a93def3190d5eacce69517079e5886ec2}
+
+\item 
+\hypertarget{classCNode_ac98d07dd8f7b70e16ccb9a01abf56b9c}{class {\bfseries boost\-::serialization\-::access}}\label{classCNode_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cnode/\-C\-Node.\-h\item 
+cnode/\-C\-Node.\-cpp\end{DoxyCompactItemize}

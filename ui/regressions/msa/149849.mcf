@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(((y1 = z2& y2 = z2& !w = var_1)| (y2 = z2& y1 = z1& !var_2 = w)| (y2 = z1& y1 = z1& !w = var_1))& (w = var_1| (!y2 = z1& !y2 = z2)| (!y1 = z1& !y1 = z2)))

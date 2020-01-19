@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+(it_counter0:0:lookup_authmethod1>=0& it_counter2:0:lookup_authmethod1>=0& it_counter0:0:lookup_authmethod1=it_counter2:0:lookup_authmethod1+1& var_5_52 = 1& var_5_52 = 3& (it_counter0:0:lookup_authmethod1 = 6| (it_counter0:0:lookup_authmethod1 = 1& type = 9)| (it_counter0:0:lookup_authmethod1 = 4& type = 39)| (it_counter0:0:lookup_authmethod1 = 5& type = 41)| (it_counter0:0:lookup_authmethod1 = 2& type = 6)| (it_counter0:0:lookup_authmethod1 = 3& type = 35)))

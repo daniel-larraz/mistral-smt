@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(N6:8:3+k13:9+2>argc& !x = 0& !argc = 0& !argc = N6:8:3& d2 = 2& !d4 = 0& argc!=N6:8:3+1& d2<=3& argc<=1& size>=0& N6:8:3+k13:9<argc& N6:8:3+k13:9+3>argc& argc<=k13:9& var_3>0& !d2 = 1& !d2 = 3& var_4 = 112& var_1>0& var_3>x+1& var_5>0& var_2<=x+1& var_5<=x+1& d2>0& argc!=N6:8:3+2& argc>0& var_1<=x+1& var_2>0)

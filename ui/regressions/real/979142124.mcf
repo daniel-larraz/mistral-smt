@@ -1,0 +1,4 @@
+Type: solve
+Status: SAT
+((((!d12 = 0& !arrayref(drf(argv), argc-1) = 0& d8 = 0)| !target_directory = 0)& ((!target_directory = 0& -argc+N6:6:3+4<=0)| (!target_directory = 0& (d9 = 2| -d9+4<=0)& -argc+N6:6:3+3<=0)| (-argc+N6:6:3+2<=0& !target_directory = 0& d9 = 1)| (!target_directory = 0& -argc+2<=0& d9<=0)| (d9 = 1& -argc+N6:6:3+3<=0)| ((d9 = 2| -d9+4<=0)& -argc+N6:6:3+4<=0)| (d9<=0& -argc+3<=0)| -argc+N6:6:3+5<=0))| (((!d12 = 0& !arrayref(drf(argv), argc-1) = 0& d8 = 0)| !target_directory = 0)& ((target_directory = 0& argc<=2)| (target_directory = 0& (d9 = 2| -d9+4<=0)& argc-N6:6:3<=3)| (target_directory = 0& d9 = 3& argc-N6:6:3<=4)| ((d9 = 2| -d9+4<=0)& argc-N6:6:3<=2)| (d9 = 3& argc-N6:6:3<=3)| (argc-N6:6:3<=1& d9 = 1)| (argc<=1& d9<=0)| (target_directory = 0& d9 = 1& argc-N6:6:3<=2))))
+

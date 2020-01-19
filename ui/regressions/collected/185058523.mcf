@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!pw = 0& field5352_32(options)>=0& (pw = 0| (!pw = 0& field5352_32(options)<=256))& field3300_32(options)>256& field3300_32(options)>=0)

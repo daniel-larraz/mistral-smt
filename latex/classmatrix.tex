@@ -1,0 +1,131 @@
+\hypertarget{classmatrix}{\section{matrix \-Class \-Reference}
+\label{classmatrix}\index{matrix@{matrix}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmatrix_a3c6fcf718dcee66b64c02a49fc95d453}{{\bfseries matrix} (int rows, int num\-\_\-vars, vector$<$ string $>$ $\ast$vars)}\label{classmatrix_a3c6fcf718dcee66b64c02a49fc95d453}
+
+\item 
+\hypertarget{classmatrix_a9e077c39ae45c2912bba77eb93a296d1}{{\bfseries matrix} (int rows, int cols)}\label{classmatrix_a9e077c39ae45c2912bba77eb93a296d1}
+
+\item 
+\hypertarget{classmatrix_a5fd2825c8ca21d023209845f31becc9f}{int {\bfseries num\-\_\-rows} ()}\label{classmatrix_a5fd2825c8ca21d023209845f31becc9f}
+
+\item 
+\hypertarget{classmatrix_ac3244bb0c7739890bf309d216e23a055}{int {\bfseries num\-\_\-vars} ()}\label{classmatrix_ac3244bb0c7739890bf309d216e23a055}
+
+\item 
+\hypertarget{classmatrix_a04f1d120c6ad17cac1e15ad26e07fb47}{int {\bfseries num\-\_\-cols} ()}\label{classmatrix_a04f1d120c6ad17cac1e15ad26e07fb47}
+
+\item 
+\hypertarget{classmatrix_a48c71476541b8b226973016f146484b9}{{\bfseries matrix} (const \hyperlink{classmatrix}{matrix} \&other, int new\-\_\-rows=-\/1)}\label{classmatrix_a48c71476541b8b226973016f146484b9}
+
+\item 
+\hypertarget{classmatrix_a01d679e9b5a43a8db13eef2ea7c4653c}{void {\bfseries simplify\-\_\-matrix} ()}\label{classmatrix_a01d679e9b5a43a8db13eef2ea7c4653c}
+
+\item 
+\hypertarget{classmatrix_ab72918afc60a2f4ec582de7f89b582ac}{void {\bfseries set} (int r, int c, \hyperlink{classbignum}{bignum} v)}\label{classmatrix_ab72918afc60a2f4ec582de7f89b582ac}
+
+\item 
+\hypertarget{classmatrix_a392d201cede47f99cebf3fe683ac1db0}{void {\bfseries set} (int r, int c, long int i)}\label{classmatrix_a392d201cede47f99cebf3fe683ac1db0}
+
+\item 
+\hypertarget{classmatrix_af48c96d206d8007ec88dadba77529fde}{\hyperlink{classbignum}{bignum} {\bfseries get} (int r, int c)}\label{classmatrix_af48c96d206d8007ec88dadba77529fde}
+
+\item 
+\hypertarget{classmatrix_a7662abc6ef708f9ef6585628091e0968}{void {\bfseries multiply\-\_\-row} (int r, \hyperlink{classbignum}{bignum} f)}\label{classmatrix_a7662abc6ef708f9ef6585628091e0968}
+
+\item 
+\hypertarget{classmatrix_a52330a6367fbef44d008000a6e8e22e7}{void {\bfseries flip\-\_\-row\-\_\-sign} (int r)}\label{classmatrix_a52330a6367fbef44d008000a6e8e22e7}
+
+\item 
+\hypertarget{classmatrix_a4fb197f10e386909e2c990e2171ceeca}{void {\bfseries divide\-\_\-row} (int r, \hyperlink{classbignum}{bignum} f)}\label{classmatrix_a4fb197f10e386909e2c990e2171ceeca}
+
+\item 
+\hypertarget{classmatrix_a4cfb024cd09bd851fc00a453ca315960}{void {\bfseries add\-\_\-row} (int r, \hyperlink{classbignum}{bignum} f)}\label{classmatrix_a4cfb024cd09bd851fc00a453ca315960}
+
+\item 
+\hypertarget{classmatrix_a830c40d1d028da32195d647923865ad2}{void {\bfseries delete\-\_\-bigrow} (int r)}\label{classmatrix_a830c40d1d028da32195d647923865ad2}
+
+\item 
+\hypertarget{classmatrix_ab6bf699286d426f4e768facdef4808e8}{string {\bfseries to\-\_\-string} ()}\label{classmatrix_ab6bf699286d426f4e768facdef4808e8}
+
+\item 
+\hypertarget{classmatrix_a77d3e3ff3d4a887509d2f4fc2b854cd2}{\hyperlink{classbignum}{bignum} {\bfseries get\-\_\-coef\-\_\-gcd} (int r)}\label{classmatrix_a77d3e3ff3d4a887509d2f4fc2b854cd2}
+
+\item 
+\hypertarget{classmatrix_aa08a8b818aff21a0b111a247661f6ec0}{vector$<$ string $>$ \& {\bfseries get\-\_\-vars} ()}\label{classmatrix_aa08a8b818aff21a0b111a247661f6ec0}
+
+\item 
+\hypertarget{classmatrix_aa2d436298cfd2e6d1fb0dbd3551c83ad}{int {\bfseries get\-\_\-pivot} (int r)}\label{classmatrix_aa2d436298cfd2e6d1fb0dbd3551c83ad}
+
+\item 
+\hypertarget{classmatrix_a86510224f830f6c92ca415df037727aa}{\hyperlink{classbignum}{bignum} {\bfseries get\-\_\-constant} (int r)}\label{classmatrix_a86510224f830f6c92ca415df037727aa}
+
+\item 
+\hypertarget{classmatrix_a806dfaa0efa6f3b3b89aaad05265782a}{void {\bfseries set\-\_\-constant} (int r, \hyperlink{classbignum}{bignum} b)}\label{classmatrix_a806dfaa0efa6f3b3b89aaad05265782a}
+
+\item 
+\hypertarget{classmatrix_accea607c2f03c6b146dbbe9e7485f442}{void {\bfseries set\-\_\-pivot} (int r, int p)}\label{classmatrix_accea607c2f03c6b146dbbe9e7485f442}
+
+\item 
+\hypertarget{classmatrix_a60f033001cb12ece250d24e7d4a2877d}{int {\bfseries get\-\_\-first\-\_\-positive\-\_\-index} (int r)}\label{classmatrix_a60f033001cb12ece250d24e7d4a2877d}
+
+\item 
+\hypertarget{classmatrix_ad37aac40673b23a7a51e1442ce324cf8}{void {\bfseries pivot} (int pivot\-\_\-row, int pivot\-\_\-index, bool simplify=true)}\label{classmatrix_ad37aac40673b23a7a51e1442ce324cf8}
+
+\item 
+\hypertarget{classmatrix_aab888ed9660b734a8e14ae8db9ebf320}{void {\bfseries multiply} (\hyperlink{classmatrix}{matrix} \&op, \hyperlink{classmatrix}{matrix} \&result)}\label{classmatrix_aab888ed9660b734a8e14ae8db9ebf320}
+
+\item 
+\hypertarget{classmatrix_a1b0be29630a770624c7ee93641547d55}{\hyperlink{classbignum}{bignum} {\bfseries dot\-\_\-product} (int r, int cc, \hyperlink{classmatrix}{matrix} \&op)}\label{classmatrix_a1b0be29630a770624c7ee93641547d55}
+
+\item 
+\hypertarget{classmatrix_a098decbf12b8c5b66575d17fce4c7f1f}{void {\bfseries compute\-\_\-redundant\-\_\-rows} (std\-::set$<$ int $>$ \&red\-\_\-rows)}\label{classmatrix_a098decbf12b8c5b66575d17fce4c7f1f}
+
+\item 
+\hypertarget{classmatrix_a5323b59c82073276e1facbd22abcf8f1}{\hyperlink{classbignum}{bignum} {\bfseries invert} (\hyperlink{classmatrix}{matrix} \&result)}\label{classmatrix_a5323b59c82073276e1facbd22abcf8f1}
+
+\item 
+\hypertarget{classmatrix_a3a708f73636f1302b91c99183381b443}{void {\bfseries vector\-\_\-multiply} (\hyperlink{classbignum}{bignum} $\ast$b, \hyperlink{classbignum}{bignum} $\ast$res)}\label{classmatrix_a3a708f73636f1302b91c99183381b443}
+
+\item 
+\hypertarget{classmatrix_ac304b39759d0551990b3da0f00309cfa}{void {\bfseries row\-\_\-vector\-\_\-multiply} (\hyperlink{classbignum}{bignum} $\ast$b, \hyperlink{classbignum}{bignum} $\ast$res)}\label{classmatrix_ac304b39759d0551990b3da0f00309cfa}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmatrix_aef4166e34912a3aa6a3a094bc04e3c40}{\hyperlink{uniondata__type}{data\-\_\-type} $\ast$ {\bfseries dmatrix}}\label{classmatrix_aef4166e34912a3aa6a3a094bc04e3c40}
+
+\item 
+\hypertarget{classmatrix_a4b1510b3427815ae114b66d1bea22ca3}{const int {\bfseries rows}}\label{classmatrix_a4b1510b3427815ae114b66d1bea22ca3}
+
+\item 
+\hypertarget{classmatrix_a2a42ae1be2a3ba1224fb52ce611b0302}{const int {\bfseries cols}}\label{classmatrix_a2a42ae1be2a3ba1224fb52ce611b0302}
+
+\item 
+\hypertarget{classmatrix_a176a31f6dd3ed4b142665b2d2ac322ba}{const int {\bfseries mcols}}\label{classmatrix_a176a31f6dd3ed4b142665b2d2ac322ba}
+
+\item 
+\hypertarget{classmatrix_ae0a8f696146fca04ecce08c9c3262001}{bool $\ast$ {\bfseries big\-\_\-rows}}\label{classmatrix_ae0a8f696146fca04ecce08c9c3262001}
+
+\item 
+\hypertarget{classmatrix_ade936c553987bac183e839b36553d2ff}{vector$<$ string $>$ $\ast$ {\bfseries vars}}\label{classmatrix_ade936c553987bac183e839b36553d2ff}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmatrix_a719939672fd1aff22cf454d1d3468b00}{class {\bfseries slack\-\_\-matrix}}\label{classmatrix_a719939672fd1aff22cf454d1d3468b00}
+
+\item 
+\hypertarget{classmatrix_a50c021c146677e930106663ea7d32920}{ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \hyperlink{classmatrix}{matrix} \&obj)}\label{classmatrix_a50c021c146677e930106663ea7d32920}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+numeric-\/lib/matrix.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+f(a,1)=0&f(b,1)=1&a=b

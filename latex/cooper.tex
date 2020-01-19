@@ -1,0 +1,56 @@
+\hypertarget{cooper_cooper-intro}{}\section{\-What is Cooper?}\label{cooper_cooper-intro}
+\hyperlink{classCooper}{\-Cooper} is the component of \-Mistral for performing quantifier elimination. \-It implements \href{http://www.cs.wm.edu/~idillig/cs780-02/Cooper.pdf}{\tt \-Cooper's method } for eliminating quantifiers in \-Presburger arithmetic (i.\-e., linear arithmetic over integers).\hypertarget{cooper_cooper-use}{}\section{\-How to Use Cooper}\label{cooper_cooper-use}
+\-To perform existential quantifier elimination, one can use the eliminate\-\_\-evar methods provided in \hyperlink{Constraint_8h_source}{\-Constraint.\-h}. \-Here is a simple example illustrating existential quantifier elimination\-:
+
+\begin{DoxyVerb}
+VariableTerm* x = VariableTerm::make("x");
+VariableTerm* y = VariableTerm::make("y");
+
+map<Term*, long int> elems;
+elems[x] = 1;
+elems[y] = 1;
+Term* t = ArithmeticTerm::make(elems, 0);
+
+Constraint c1(x, ConstantTerm::make(0), ATOM_LT);
+Constraint c2(t, ConstantTerm::make(0), ATOM_GEQ);
+Constraint c3 = c1 & c2;
+
+cout << "Before elimination: " << c3 << endl;
+c3.eliminate_evar(x);
+cout << "After elimination: " << c3 << endl;
+\end{DoxyVerb}
+
+
+\-Here, we first construct a constraint c3 which represents the formula x$<$0 \& x+y $>$=0. \-We then call the eliminate\-\_\-evar method to eliminate variable x as an existentially quantified variable. \-The constraint that is printed at the last line is y$>$0, which is the result of performing quantifier elimination.
+
+\-There is also an interface that allows eliminating multiple variables at the same time. \-For instance, in the previous example, here is how we would eliminate both x and y from constraint c3\-:
+
+\begin{DoxyVerb}
+set<VariableTerm*> vars;
+vars.insert(x);
+vars.insert(y);
+c3. eliminate(vars);
+cout << "Result of quantifier elimination: " << c3 << endl;
+\end{DoxyVerb}
+
+
+\-In addition, \hyperlink{classCooper}{\-Cooper} provides an interface for eliminating universally quantified variables. \-For this purpose, one can use the eliminate\-\_\-uvar method as follows\-: \begin{DoxyVerb}
+VariableTerm* x = VariableTerm::make("x");
+VariableTerm* y = VariableTerm::make("y");
+
+map<Term*, long int> elems;
+elems[x] = 1;
+elems[y] = 1;
+Term* t = ArithmeticTerm::make(elems, 0);
+
+Constraint c1(x, ConstantTerm::make(0), ATOM_GEQ);
+Constraint c2(t, ConstantTerm::make(0), ATOM_LT);
+Constraint c3 = c1 & c2;
+
+cout << "Before elimination: " << c3 << endl;
+c3.eliminate_uvar(x);
+cout << "After elimination: " << c3 << endl;
+\end{DoxyVerb}
+
+
+\-Here, the original constraint c3 is (x$>$=0 $|$ x+y$<$0). \-After eliminating x as a universally quantified variable, we obtain y $<$= 0. 

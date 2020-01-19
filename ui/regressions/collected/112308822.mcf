@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!0 = field10416_32(options)& !args = 0& 0 = array_1(drf(args), length(drf(args)))& length(drf(args))<field_minus_4_32(drf(args))& field_minus_4_32(drf(args))>=0& length(drf(args))>=0& length(drf(args))>0& (0 = field10416_32(options)| args = 0| length(drf(args))<=0| !0 = Bunmodeled3(0))& !-1 = Bunmodeled3(0))

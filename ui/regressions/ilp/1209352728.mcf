@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+z>0&z=-x1+x2&12x1+11x2<=63&-22x1+4x2<=-33&x1>=0&x2>=0

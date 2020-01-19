@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+((d1 = 0| (!optind = 0& !var_4 = 55)| (optind = 0& !var_1 = 55)| (!optind = 0& var_3<=1)| (optind = 0& var_2<=1))& d2 = 0& (d1 = 0| (!optind = 0& !var_4 = 118)| (!optind = 0& var_3<=1)| (optind = 0& !var_1 = 118)| (optind = 0& var_2<=1))& (d1 = 0| (argc>N6:3:3+1& optind = 0& (!var_1 = 112| var_2<=1))| (!optind = 0& argc>N6:3:3+optind& argc>0& (!var_4 = 112| var_3<=1))))

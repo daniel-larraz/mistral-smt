@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+((i<0| i>=N| !i%2=0)& k>=0& i = 0& (k<0| k>=N| size>2k)& N>=0& size<=2N)

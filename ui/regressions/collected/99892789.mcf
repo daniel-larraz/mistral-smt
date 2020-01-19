@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(sessions_first_unused>-2& !sessions = 0& 216sessions_nalloc=field_minus_4_32(drf(sessions))& sessions_first_unused<sessions_nalloc& (sessions_first_unused = -1| 0 = field0_32(array_216(drf(sessions), sessions_first_unused)))& field_minus_4_32(drf(sessions))>=0& (((field19744_32(options)<=sessions_nalloc| !sessions_first_unused = -1)& (sessions_first_unused = -1| sessions+216sessions_first_unused=0))| Bunmodeled0(var_5_2) = Bunmodeled12(0))& (((field19744_32(options)<=sessions_nalloc| !sessions_first_unused = -1)& (sessions_first_unused = -1| sessions+216sessions_first_unused=0))| !13 = Bunmodeled12(0)))

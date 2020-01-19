@@ -1,0 +1,84 @@
+\hypertarget{classILPLeaf}{\section{\-I\-L\-P\-Leaf \-Class \-Reference}
+\label{classILPLeaf}\index{\-I\-L\-P\-Leaf@{\-I\-L\-P\-Leaf}}
+}
+\-Inheritance diagram for \-I\-L\-P\-Leaf\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classILPLeaf}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classILPLeaf_a3683eed8b33a76cdd8a2a3e521029b28}{virtual bool {\bfseries operator==} (const \hyperlink{classCNode}{\-C\-Node} \&other)}\label{classILPLeaf_a3683eed8b33a76cdd8a2a3e521029b28}
+
+\item 
+\hypertarget{classILPLeaf_a888f4656b61bf03f7c2c7d3c7d45e7e2}{virtual string {\bfseries to\-\_\-string} ()}\label{classILPLeaf_a888f4656b61bf03f7c2c7d3c7d45e7e2}
+
+\item 
+\hypertarget{classILPLeaf_a0a694ab27b8c6a5a45926b97f4f60c51}{ilp\-\_\-leaf\-\_\-type {\bfseries get\-\_\-operator} ()}\label{classILPLeaf_a0a694ab27b8c6a5a45926b97f4f60c51}
+
+\item 
+\hypertarget{classILPLeaf_a601e640ff15c02f3a7c0ee5f4dc25a82}{const map$<$ \hyperlink{classTerm}{\-Term} $\ast$, long int $>$ \& {\bfseries get\-\_\-elems} ()}\label{classILPLeaf_a601e640ff15c02f3a7c0ee5f4dc25a82}
+
+\item 
+\hypertarget{classILPLeaf_a9ce63fa37098afe3d590a50d5862b8bc}{long int {\bfseries get\-\_\-constant} ()}\label{classILPLeaf_a9ce63fa37098afe3d590a50d5862b8bc}
+
+\item 
+\hypertarget{classILPLeaf_aec0b09c10a2f2e32609db6faf1e064bd}{long {\bfseries get\-\_\-coefficient} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classILPLeaf_aec0b09c10a2f2e32609db6faf1e064bd}
+
+\item 
+\hypertarget{classILPLeaf_aaec744311d63d28f58fd130c218d828c}{bool {\bfseries contains\-\_\-elem} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classILPLeaf_aaec744311d63d28f58fd130c218d828c}
+
+\item 
+\hypertarget{classILPLeaf_a456ddb011ba699d884e037c2054ac881}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries remove\-\_\-elem} (\hyperlink{classTerm}{\-Term} $\ast$t)}\label{classILPLeaf_a456ddb011ba699d884e037c2054ac881}
+
+\item 
+\hypertarget{classILPLeaf_abbaa583ce97c9061e3c8f2dff10884fc}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries negate} (bool remove\-\_\-all\-\_\-negations=false)}\label{classILPLeaf_abbaa583ce97c9061e3c8f2dff10884fc}
+
+\item 
+\hypertarget{classILPLeaf_a4fd0cbc6c3ee5f89b7e7a1146b39b6c6}{virtual \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute} (map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&subs)}\label{classILPLeaf_a4fd0cbc6c3ee5f89b7e7a1146b39b6c6}
+
+\item 
+\hypertarget{classILPLeaf_a1351d142419128c4da2cfde59970f5e2}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries multiply} (long int factor)}\label{classILPLeaf_a1351d142419128c4da2cfde59970f5e2}
+
+\item 
+\hypertarget{classILPLeaf_a2a2a3f3c521e9668a3b74e4914ca1819}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries add} (\hyperlink{classILPLeaf}{\-I\-L\-P\-Leaf} $\ast$other)}\label{classILPLeaf_a2a2a3f3c521e9668a3b74e4914ca1819}
+
+\item 
+\hypertarget{classILPLeaf_ae866511969891fe9d213038e900cfc25}{string {\bfseries pretty\-\_\-print\-\_\-ilp} (bool neg)}\label{classILPLeaf_ae866511969891fe9d213038e900cfc25}
+
+\item 
+\hypertarget{classILPLeaf_af1aed72a3fcf4662a7c60e240fe368cc}{virtual \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries divide} (long int c, \hyperlink{classTerm}{\-Term} $\ast$t)}\label{classILPLeaf_af1aed72a3fcf4662a7c60e240fe368cc}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classILPLeaf_abf0eed608f5cd1950919b43883207323}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries make} (ilp\-\_\-leaf\-\_\-type kind, const map$<$ \hyperlink{classTerm}{\-Term} $\ast$, long int $>$ \&elems, long int constant)}\label{classILPLeaf_abf0eed608f5cd1950919b43883207323}
+
+\item 
+\hypertarget{classILPLeaf_a643b96a6a598b0ab389feb2f32a91470}{static \hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries make} (\hyperlink{classTerm}{\-Term} $\ast$t1, \hyperlink{classTerm}{\-Term} $\ast$t2, ilp\-\_\-leaf\-\_\-type kind)}\label{classILPLeaf_a643b96a6a598b0ab389feb2f32a91470}
+
+\item 
+\hypertarget{classILPLeaf_a115dddc2676faf2f1322c27ab2ac57d0}{static string {\bfseries ilp\-\_\-leaf\-\_\-type\-\_\-to\-\_\-string} (ilp\-\_\-leaf\-\_\-type t)}\label{classILPLeaf_a115dddc2676faf2f1322c27ab2ac57d0}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classILPLeaf_acd83ccdf9b353bf2ffb97f0e67238981}{{\bfseries \-I\-L\-P\-Leaf} (ilp\-\_\-leaf\-\_\-type kind, const map$<$ \hyperlink{classTerm}{\-Term} $\ast$, long int $>$ \&elems, long int constant)}\label{classILPLeaf_acd83ccdf9b353bf2ffb97f0e67238981}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classILPLeaf_ac98d07dd8f7b70e16ccb9a01abf56b9c}{class {\bfseries boost\-::serialization\-::access}}\label{classILPLeaf_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cnode/\-I\-L\-P\-Leaf.\-h\item 
+cnode/\-I\-L\-P\-Leaf.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+((k<size| k>=N| k<0)& N>=size& i = 0& (i<0| i>=N)& k>=0)

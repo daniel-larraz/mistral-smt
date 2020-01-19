@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+((0 = field96_32(options)| (field100_32(options)>0& field100_32(options)<=9))& field1872_32(options)<=100& field5080_32(options)<=100& !0 = field12_32(options)& it_counter-1:141:ssh_init_forwarding>=0& Bunmodeled52(it_counter-1:141:ssh_init_forwarding-1)+Bunmodeled53(var_5_19)=Bunmodeled51(0)& (0 = field12_32(options)| field1872_32(options)<=0| field1872_32(options)=Bunmodeled52(it_counter-1:141:ssh_init_forwarding-1)+Bunmodeled53(var_5_19))& 0 = array_1(drf(field10408_64(options)), length(drf(field10408_64(options))))& length(drf(field10408_64(options)))>=0& field_minus_4_32(drf(field10408_64(options)))>=0& length(drf(field10408_64(options)))<field_minus_4_32(drf(field10408_64(options)))& !fork_after_authentication_flag = 0)

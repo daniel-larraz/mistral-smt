@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+3<=11x+13y&11x+13y<=21

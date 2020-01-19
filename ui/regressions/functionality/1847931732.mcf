@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+x+y%3=0 & x+y=4

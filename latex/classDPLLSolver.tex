@@ -1,0 +1,62 @@
+\hypertarget{classDPLLSolver}{\section{\-D\-P\-L\-L\-Solver \-Class \-Reference}
+\label{classDPLLSolver}\index{\-D\-P\-L\-L\-Solver@{\-D\-P\-L\-L\-Solver}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries stack\-\_\-elem}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDPLLSolver_aaabd090084e867fb00c5ebb7ff82fef2}{{\bfseries \-D\-P\-L\-L\-Solver} (set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&ilp\-\_\-terms, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ $\ast$assignments=\-N\-U\-L\-L)}\label{classDPLLSolver_aaabd090084e867fb00c5ebb7ff82fef2}
+
+\item 
+\hypertarget{classDPLLSolver_a610cf2273c5dc565c769c78cbf8c4901}{{\bfseries \-D\-P\-L\-L\-Solver} (\hyperlink{classCNode}{\-C\-Node} $\ast$theory\-\_\-tautologies, set$<$ \hyperlink{classTerm}{\-Term} $\ast$ $>$ \&ilp\-\_\-terms, map$<$ \hyperlink{classTerm}{\-Term} $\ast$, \hyperlink{classSatValue}{\-Sat\-Value} $>$ $\ast$assignments=\-N\-U\-L\-L)}\label{classDPLLSolver_a610cf2273c5dc565c769c78cbf8c4901}
+
+\item 
+\hypertarget{classDPLLSolver_ab6704d3098036e50cbc2cf6417d6a478}{void {\bfseries push} (\hyperlink{classCNode}{\-C\-Node} $\ast$c)}\label{classDPLLSolver_ab6704d3098036e50cbc2cf6417d6a478}
+
+\item 
+\hypertarget{classDPLLSolver_a8e30125c0474b450d5639dd4353b5828}{void {\bfseries pop} ()}\label{classDPLLSolver_a8e30125c0474b450d5639dd4353b5828}
+
+\item 
+\hypertarget{classDPLLSolver_a7da903735d63fb5a39160f1c564c7dfa}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-stack} ()}\label{classDPLLSolver_a7da903735d63fb5a39160f1c564c7dfa}
+
+\item 
+\hypertarget{classDPLLSolver_a4c9e846203c9f0641a6aa88ffbe62d42}{void {\bfseries restrict} (\hyperlink{classCNode}{\-C\-Node} $\ast$background)}\label{classDPLLSolver_a4c9e846203c9f0641a6aa88ffbe62d42}
+
+\item 
+\hypertarget{classDPLLSolver_aa5b5907b0ca90447bd2fd57dc3a20b61}{bool {\bfseries is\-\_\-sat} ()}\label{classDPLLSolver_aa5b5907b0ca90447bd2fd57dc3a20b61}
+
+\item 
+\hypertarget{classDPLLSolver_ad631c1d00ab91fd8f62192cbd95ba21c}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-background\-\_\-assumptions} ()}\label{classDPLLSolver_ad631c1d00ab91fd8f62192cbd95ba21c}
+
+\item 
+\hypertarget{classDPLLSolver_ab508b0a082d20e89ab49a0cdaa2479b6}{string {\bfseries get\-\_\-stats} ()}\label{classDPLLSolver_ab508b0a082d20e89ab49a0cdaa2479b6}
+
+\item 
+\hypertarget{classDPLLSolver_a3879075c66f882bd03d5950a39f8fa95}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries get\-\_\-current\-\_\-assignment} ()}\label{classDPLLSolver_a3879075c66f882bd03d5950a39f8fa95}
+
+\item 
+\hypertarget{classDPLLSolver_a506016ab888db5b911db88de4ba88fc2}{int {\bfseries get\-\_\-num\-\_\-consecutive\-\_\-boolean\-\_\-complete} () const }\label{classDPLLSolver_a506016ab888db5b911db88de4ba88fc2}
+
+\item 
+\hypertarget{classDPLLSolver_a9fcdffbba56b43867aa7c0df93b08bac}{double {\bfseries boolean\-\_\-complete\-\_\-ratio} () const }\label{classDPLLSolver_a9fcdffbba56b43867aa7c0df93b08bac}
+
+\item 
+\hypertarget{classDPLLSolver_aa1dcbd6358c3ceddff66a1c90e8bfed8}{double {\bfseries time\-\_\-verifying\-\_\-boolean\-\_\-assignment} () const }\label{classDPLLSolver_aa1dcbd6358c3ceddff66a1c90e8bfed8}
+
+\item 
+\hypertarget{classDPLLSolver_a0fd2424e651b2b8679f8ce4e12dd38f3}{int {\bfseries num\-\_\-clauses\-\_\-checked\-\_\-in\-\_\-theory} () const }\label{classDPLLSolver_a0fd2424e651b2b8679f8ce4e12dd38f3}
+
+\item 
+\hypertarget{classDPLLSolver_a54a36e043d82076fc80834e3fbeb470a}{\hyperlink{classCNode}{\-C\-Node} $\ast$ {\bfseries substitute\-\_\-partial\-\_\-assignment} (\hyperlink{classCNode}{\-C\-Node} $\ast$constraint)}\label{classDPLLSolver_a54a36e043d82076fc80834e3fbeb470a}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+solver/\-D\-P\-L\-L\-Solver.\-h\item 
+solver/\-D\-P\-L\-L\-Solver.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+Type: solve
+Status: SAT
+
+(
+(!arrayref(drf(name), 0unmodeled_val0+0N3:2+j0) = 47& unmodeled_val0+N3:2-j0<=0& j0-size(arrayref(drf(name), 0))+2<=0)| (unmodeled_val0-j0<=0& !arrayref(drf(name), 0unmodeled_val0+j0) = 47& j0-size(arrayref(drf(name), 0))+2<=0& unmodeled_val0+N3:2=size(arrayref(drf(name), 0)))| (unmodeled_val0-j0<=0& !arrayref(drf(name), 0unmodeled_val0+j0) = 47& j0-size(arrayref(drf(name), 0))+2<=0& !47 = arrayref(drf(name), unmodeled_val0+N3:2-1))| (47 = arrayref(drf(name), unmodeled_val0+N3:2-1)& !unmodeled_val0+N3:2=size(arrayref(drf(name), 0))& unmodeled_val0+N3:2=j0)| (j0 = unmodeled_val0& (unmodeled_val0+N3:2=size(arrayref(drf(name), 0))| !47 = arrayref(drf(name), unmodeled_val0+N3:2-1))))
+

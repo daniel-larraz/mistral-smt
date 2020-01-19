@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+hd(tl(a,i))=k&hd(tl(b,j))=m&i=j

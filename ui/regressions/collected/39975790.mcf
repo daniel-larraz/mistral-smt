@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(drf(timeoutp)>0& !0 = Bunmodeled5(0)& errno = 115& (drf(timeoutp)<=0| 0 = Bunmodeled5(0)| !errno = 115| Bunmodeled13(0) = Bunmodeled0(var_5_2))& (Bunmodeled13(0)<=-2| Bunmodeled13(0)>1))

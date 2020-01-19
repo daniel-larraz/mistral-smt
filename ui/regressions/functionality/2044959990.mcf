@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+!f(u)=f(z)&t1=f(x)&t2=f(y)&u=t1-t2&x<=y&y+z<=x&0<=z

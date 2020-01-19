@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+i=u&j=v&f(u)=k&f(v)=m&k+m>=3&k<=1

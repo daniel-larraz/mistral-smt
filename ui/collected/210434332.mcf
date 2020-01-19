@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter1:5:getopt_long>=0& ((optind = 0& argc>it_counter1:5:getopt_long& (argc<=it_counter1:5:getopt_long+1| 45 = drf(array_8(drf(argv), it_counter1:5:getopt_long+1))))| (!optind = 0& (argc>=it_counter1:5:getopt_long+optind| it_counter1:5:getopt_long = 0)& (argc<=it_counter1:5:getopt_long+optind| 45 = drf(array_8(drf(argv), optind+it_counter1:5:getopt_long)))))& (argc<=0| (argc>0& (argc<=it_counter1:5:getopt_long+optind| (optind = 0& argc<=it_counter1:5:getopt_long+1)))))

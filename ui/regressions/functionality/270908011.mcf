@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+!(f(x)=1|f(x)!=1)

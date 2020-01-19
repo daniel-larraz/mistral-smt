@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+f(x)=u&u=x+y&x<=y+z&x+z<=y&y=1&!f(x)=f(2)

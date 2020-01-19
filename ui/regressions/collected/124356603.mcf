@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!argv = 0& argc>0& argc>Haddr#(115)+1& Haddr#(115)>0& (0 = Bunmodeled56(0)| argc<=Haddr#(115)+2)& d3>=0& (!0 = Bunmodeled56(0)| !d3 = 0| 0 = array_8(drf(argv), argc-1)))

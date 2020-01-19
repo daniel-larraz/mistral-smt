@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!hostaddr = 0& field0_16(drf(hostaddr))>=0& (!field0_16(drf(hostaddr)) = 10| !var_3_5 = 0))

@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+f#(a) = f#(b) & a!=b

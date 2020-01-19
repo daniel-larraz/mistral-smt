@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+a=f(z) & f(a)=f(z) & t1=f(z) & t2=f(z) & f(z) != f(u) & u<= t1 & t1<=u

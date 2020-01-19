@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+((l<=k&k<=u)->tl(a,k)=tl(b,k))&l<=k&k<=u+1&tl(aa,k)!=tl(b,k)&(k<=u->tl(a,k)=tl(aa,k))&v=u+1&tl(aa,v)=tl(b,v)

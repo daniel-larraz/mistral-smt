@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(size>=0& nmemb>=0& (size = 0| nmemb = 0))

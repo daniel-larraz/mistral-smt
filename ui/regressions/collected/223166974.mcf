@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!key = 0& (key = 0| (!key = 0& !0 = field8_64(drf(key))))& it_counter1>=0& (15 = Bunmodeled5(it_counter1)| !14 = Bunmodeled20(it_counter1))& it_counter4>=0& it_counter4 = var_2_36)

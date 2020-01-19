@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(((d = 3| !a = d)& (!b = d| d = 3))| !a = b)

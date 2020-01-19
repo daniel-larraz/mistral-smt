@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(var_3_4 = var_2_4& i<field3300_32(options)& i>=0& field3300_32(options)>=0)

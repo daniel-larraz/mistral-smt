@@ -1,0 +1,4 @@
+Type: solve
+Status: SAT
+((!arrayref(drf(a), 2) = 2| !arrayref(drf(a), 1) = 1)& ((!arrayref(drf(a), 2) = 2& arrayref(drf(a), 1) = 1)| !arrayref(drf(a), 1) = 1))
+

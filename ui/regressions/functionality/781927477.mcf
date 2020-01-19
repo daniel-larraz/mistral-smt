@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+f(f(z))=f(z) & a1=f(z) & a2=f(z) & f(z) != f(u) & u-a1<=0 & -u+a1<=0

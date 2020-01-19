@@ -1,0 +1,4 @@
+Type: solve
+Status: UNSAT
+a2 = f(u) & a1 = f(v) & f(u) = f(a3) & f(j) = f(v) & 
+a0 = f(u) & -j<=0 & j<=0 & 0=j+a3 & -a1-a2+3<=0 & a0<=1

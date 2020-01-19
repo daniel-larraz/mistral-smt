@@ -1,0 +1,13 @@
+Type: solve
+Status: SAT
+((elim_1 = elim_2| !optind = 1)& (d1 = 0| !d2 = 0| ((!optind = 0| (112 = arrayref(drf(elim_1), 0)& size(arrayref(drf(elim_1), 0))>1))& (optind = 0| argc<=0| (112 = arrayref(drf(elim_2), 0)& size(arrayref(drf(elim_2), 0))>1)))| ((!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (!optind = 0| 118 = arrayref(drf(elim_1), 0))& (optind = 0| 118 = arrayref(drf(elim_2), 0))& (optind = 0| size(arrayref(drf(elim_2), 0))>1))| ((!optind = 0| 55 = arrayref(drf(elim_1), 0))& (!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (optind = 0| size(arrayref(drf(elim_2), 0))>1)& (optind = 0| 55 = arrayref(drf(elim_2), 0))))& (!drf(argv) = drf(elim_1)| elim_2 = arrayref(drf(elim_1), 0)| !optind = 1)& (!drf(argv) = drf(elim_1)| elim_1 = arrayref(drf(elim_1), 0))& (elim_2 = arrayref(drf(elim_2), 0)| !drf(argv) = drf(elim_2)| !optind = 1)& (!drf(argv) = drf(elim_2)| elim_1 = arrayref(drf(elim_2), 0))& (d1 = 0| !d2 = 0| ((!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (!optind = 0| 118 = arrayref(drf(elim_1), 0))& (optind = 0| 118 = arrayref(drf(elim_2), 0))& (optind = 0| size(arrayref(drf(elim_2), 0))>1))| ((!optind = 0| 55 = arrayref(drf(elim_1), 0))& (!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (optind = 0| size(arrayref(drf(elim_2), 0))>1)& (optind = 0| 55 = arrayref(drf(elim_2), 0)))| ((!optind = 0| (112 = arrayref(drf(elim_1), 0)& size(arrayref(drf(elim_1), 0))>1)| argc<0)& (optind = 0| argc<=0| (112 = arrayref(drf(elim_2), 0)& size(arrayref(drf(elim_2), 0))>1)| argc+2<=optind)))& (!drf(argv) = drf(elim_1)| elim_1 = arrayref(drf(elim_1), 0)| !optind = 1)& (!drf(argv) = drf(elim_2)| elim_1 = arrayref(drf(elim_2), 0)| !optind = 1)& (!drf(argv) = drf(elim_1)| elim_2 = arrayref(drf(elim_1), 0))& (elim_2 = arrayref(drf(elim_2), 0)| !drf(argv) = drf(elim_2))& (d1 = 0| !d2 = 0| ((!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (!optind = 0| 118 = arrayref(drf(elim_1), 0))& (optind = 0| 118 = arrayref(drf(elim_2), 0))& (optind = 0| size(arrayref(drf(elim_2), 0))>1))| ((!optind = 0| 55 = arrayref(drf(elim_1), 0))& (!optind = 0| size(arrayref(drf(elim_1), 0))>1)& (optind = 0| size(arrayref(drf(elim_2), 0))>1)& (optind = 0| 55 = arrayref(drf(elim_2), 0)))| ((!optind = 0| (112 = arrayref(drf(elim_1), 0)& size(arrayref(drf(elim_1), 0))>1)| argc+optind<=0)& (optind = 0| argc<=0| (112 = arrayref(drf(elim_2), 0)& size(arrayref(drf(elim_2), 0))>1)| argc<0))))
+
+
+
+
+
+
+
+
+
+

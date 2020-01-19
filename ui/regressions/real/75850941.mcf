@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(flag = 0| (!flag = 0& -a+6<=0)| (!flag = 0& a<=5))

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(i<field3300_32(options)& i>=0& field3300_32(options)>=0& $1 = 0)

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(f_shift8_call = 0& !var_1 = 0& f_final8_call=f8_call+f_shift8_call& f_shift9_call = 0& f9_call+f_shift9_call=_s0& f9_call+f_shift9_call>=0& a>=0& (f8_call+f_shift8_call>=N3:2| f8_call+f_shift8_call<0| var_2 = 0)& N3:2>=0& N3:2>f9_call+f_shift9_call& f_final9_call=f9_call+f_shift9_call)

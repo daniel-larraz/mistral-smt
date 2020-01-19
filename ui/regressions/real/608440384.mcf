@@ -1,0 +1,4 @@
+Type: solve
+Status: SAT
+(((((c = 104& !argc = 2)| (((N6:3:7+optind-argc+1<=0& drf(arrayref(drf(argv), N6:3:7+optind+1)) = 104& !optind = 0)| (optind = 0& N6:3:7-argc+2<=0& drf(arrayref(drf(argv), N6:3:7+2)) = 104))& argc = 2& d1 = 0))& d2 = 0)| (((argc = 2& ((118 = drf(arrayref(drf(argv), N6:3:7+optind+1))& N6:3:7+optind-argc+1<=0& !optind = 0)| (optind = 0& drf(arrayref(drf(argv), N6:3:7+2)) = 118& N6:3:7-argc+2<=0))& d1 = 0)| (c = 118& !argc = 2))& d2 = 0))& d2 = 0)
+

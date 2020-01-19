@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter0>=0& (!type = 39| 41 = Bunmodeled0(it_counter0)| 0 = field64_64(drf(authctxt))))

@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(it_counter1>=0& i+it_counter1>=field19736_32(options)& !it_counter1 = 0& (i+it_counter1<=field19736_32(options)| it_counter1 = 0))

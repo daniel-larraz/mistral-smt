@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!1 = f(x, 1)| (1 = f(x, 1)& !2 = f(x, 2)))

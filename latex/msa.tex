@@ -1,0 +1,58 @@
+\hypertarget{msa_msa-intro}{}\section{\-What is M\-S\-A\-Finder?}\label{msa_msa-intro}
+\hyperlink{classMSAFinder}{\-M\-S\-A\-Finder} is the component of \-Mistral that can be used to compute minimum satisfying assignments (\-M\-S\-A) of \-Presburger arithmetic formulas. \-An \-M\-S\-A of a formula \-F is a partial satisfying assignment of \-F that contains as few variables as possible, but is still sufficient to imply the validity of the formula. \-A precise definition of \-M\-S\-As as well as the algorithm \hyperlink{classMSAFinder}{\-M\-S\-A\-Finder} uses to compute \-M\-S\-As is described \href{http://www.cs.wm.edu/~idillig/cav2012.pdf}{\tt in this paper}.\hypertarget{msa_use-msa}{}\section{\-Using M\-S\-A\-Finder}\label{msa_use-msa}
+\-To compute minimum satisfying assignments of \-Presburger arithmetic formulas, use the msa method provided in \hyperlink{Constraint_8h_source}{\-Constraint.\-h}. \-Here is an example code snippet that illustrates how to compute \-M\-S\-As\-:
+
+\begin{DoxyVerb}
+Term* x = VariableTerm::make("x");
+Term* y = VariableTerm::make("y");
+Term* z = VariableTerm::make("z");
+
+map<Term*, long int> elems1;
+elems1[x] = 1;
+elems1[y] = 1;
+Term* t1 = ArithmeticTerm::make(elems1, 0);
+
+map<Term*, ling int> elems2;
+elems2[x] = 1;
+elems2[y] = 1;
+elems2[z] = 1;
+Term* t2 = ArithmeticTerm::make(elems2, 0);
+
+Constraint c1(t1, ConstantTerm::make(0), ATOM_GT);
+Constraint c2(t2, ConstantTerm::make(5), ATOM_LT);
+Constraint c3 = (c1 | c2);
+
+map<Term*, SatValue> min_assign;
+int min_vars = c3.msa(min_assign);
+for(auto it = min_assign.begin(); it!= min_assign.end(); it++) {
+	Term* t = it->first;
+	SatValue sv = it->second;
+	cout << t->to_string() << ":" << sv.to_string() << "\t";
+
+}
+\end{DoxyVerb}
+
+
+\-Here, c3 corresponds to the formula x+y$>$0 $|$ x+y+z $<$=5. \-The return value, min\-\_\-vars, of the msa method tells us how many variables the \-M\-S\-A of c3 contains, and the map min\-\_\-assign gives the actual minimum satisfying assignment. \-The for loop in the above code snippet prints a satisfying assignment for each variable in the msa. \-In this particular example, the minimum satisfying assignment of c3 contains only one variable, namely z, and an \-M\-S\-A of c3 is z=0.
+
+\-When computing minimum satisfying assignments, one can also assign a cost to each variable. \-In this case, the msa method yields a partial satisfying assignment that minimizes the sum of the costs of each variable used in the assignment. \-For instance, consider the cost function \-C such that \-C(x) = 1, \-C(y) = 1, \-C(z) = 5. \-Under this cost function, z= 0 is no longer an \-M\-S\-A of (x+y $>$ 0 $|$ x+y+z $<$=5 ) because the cost of the assignment z=0 is 5, and there exists a satisfying assignment with smaller cost, such as y= 0 and x=1. \-The following code snippet shows how to obtain an \-M\-S\-A for c3 subject to a cost function \-C(x) = 1, \-C(y) = 1, \-C(z) =5.
+
+\begin{DoxyVerb}
+map<VariableTerm*, int> costs;
+costs[x] = 1;
+costs[y] = 1;
+costs[z] = 5;
+
+
+map<Term*, SatValue> min_assign;
+int msa_cost = c3.msa(min_assign, costs);
+for(auto it = min_assign.begin(); it!= min_assign.end(); it++) {
+	Term* t = it->first;
+	SatValue sv = it->second;
+	cout << t->to_string() << ":" << sv.to_string() << "\t";
+
+}
+\end{DoxyVerb}
+
+
+\-For this example, msa\-\_\-cost is 2 and the \-M\-S\-A is printed as y\-:0 x\-:1. 

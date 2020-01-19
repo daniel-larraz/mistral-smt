@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+((!unmodeled_val6 = 0& d8<=0& N6:14:3+3<=argc)| argc<=0| (N6:14:3+3>argc& d8<=0)| (!unmodeled_val6 = 0& d8>3& N6:14:3<argc)| (unmodeled_val6 = 0& d8>3& N6:14:3+2<=argc)| ((d8 = 3| d8 = 2)& !unmodeled_val6 = 0& N6:14:3+2<=argc)| (unmodeled_val6 = 0& N6:14:3+4<=argc& d8<=0)| (argc>1& d8 = 1)| (N6:14:3>=argc& d8>3)| ((d8 = 3| d8 = 2)& unmodeled_val6 = 0& N6:14:3+3<=argc)| (!unmodeled_val6 = 0& argc>0& d8 = 1)| ((d8 = 3| d8 = 2)& N6:14:3+2>argc)| (((unmodeled_val6 = 0& argc<=1)| (unmodeled_val6 = 0& N6:14:3+2>argc& d8>3)| ((d8 = 3| d8 = 2)& unmodeled_val6 = 0& N6:14:3+3>argc)| (unmodeled_val6 = 0& N6:14:3+4>argc& d8<=0))& (d8 = 3| d8>3| d8 = 1| d8 = 2| N6:14:3+3<=argc)))

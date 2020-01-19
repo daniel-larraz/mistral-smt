@@ -1,0 +1,328 @@
+\hypertarget{classminisat_1_1Solver}{\section{minisat\-:\-:\-Solver \-Class \-Reference}
+\label{classminisat_1_1Solver}\index{minisat\-::\-Solver@{minisat\-::\-Solver}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structminisat_1_1Solver_1_1VarFilter}{\-Var\-Filter}
+\item 
+struct \hyperlink{structminisat_1_1Solver_1_1VarOrderLt}{\-Var\-Order\-Lt}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries polarity\-\_\-true} =  0, 
+{\bfseries polarity\-\_\-false} =  1, 
+{\bfseries polarity\-\_\-user} =  2, 
+{\bfseries polarity\-\_\-rnd} =  3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classminisat_1_1Solver_acaa799fb7a3b4d8c029a3a00bcf66592}{\-Var {\bfseries new\-Var} (bool polarity=true, bool dvar=true)}\label{classminisat_1_1Solver_acaa799fb7a3b4d8c029a3a00bcf66592}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a60e864b871d48c56ce25222dfc12f482}{void {\bfseries reserve\-Vars} (int num\-\_\-vars)}\label{classminisat_1_1Solver_a60e864b871d48c56ce25222dfc12f482}
+
+\item 
+\hypertarget{classminisat_1_1Solver_afa9a41efb60934554ee0d1088feddb25}{bool {\bfseries add\-Clause} (\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ \&ps)}\label{classminisat_1_1Solver_afa9a41efb60934554ee0d1088feddb25}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad1a30caa31b68223f269026a9ae6938e}{bool {\bfseries simplify} ()}\label{classminisat_1_1Solver_ad1a30caa31b68223f269026a9ae6938e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ab9c22c13ea75fe01d03cdc2c04291580}{bool {\bfseries solve} (const \hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ \&assumps)}\label{classminisat_1_1Solver_ab9c22c13ea75fe01d03cdc2c04291580}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ab94b515674d8606b96036cb985872532}{bool {\bfseries solve} ()}\label{classminisat_1_1Solver_ab94b515674d8606b96036cb985872532}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ace28147fe166b1e64ab263e9e95b17e6}{bool {\bfseries okay} () const }\label{classminisat_1_1Solver_ace28147fe166b1e64ab263e9e95b17e6}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aeb7eac8e1304ae120be4a1aecccc3e72}{void {\bfseries set\-Polarity} (\-Var v, bool b)}\label{classminisat_1_1Solver_aeb7eac8e1304ae120be4a1aecccc3e72}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a9e222d3293b7eb02266e03b96ca7ec9e}{void {\bfseries set\-Decision\-Var} (\-Var v, bool b)}\label{classminisat_1_1Solver_a9e222d3293b7eb02266e03b96ca7ec9e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a6fb0f3f37c39c327ca85eaec1d68f2bd}{\hyperlink{classminisat_1_1lbool}{lbool} {\bfseries value} (\-Var x) const }\label{classminisat_1_1Solver_a6fb0f3f37c39c327ca85eaec1d68f2bd}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a4b3148c900ed69f19bd686bbf05fb92d}{\hyperlink{classminisat_1_1lbool}{lbool} {\bfseries value} (\hyperlink{classminisat_1_1Lit}{\-Lit} p) const }\label{classminisat_1_1Solver_a4b3148c900ed69f19bd686bbf05fb92d}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a4e115b4916b6420d7f20dcf95f609012}{\hyperlink{classminisat_1_1lbool}{lbool} {\bfseries model\-Value} (\hyperlink{classminisat_1_1Lit}{\-Lit} p) const }\label{classminisat_1_1Solver_a4e115b4916b6420d7f20dcf95f609012}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a1d254d9313ac40750106fb133cb2ed7c}{int {\bfseries n\-Assigns} () const }\label{classminisat_1_1Solver_a1d254d9313ac40750106fb133cb2ed7c}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a7f83bea6321151df4ac5de0cb86a1e5f}{int {\bfseries n\-Clauses} () const }\label{classminisat_1_1Solver_a7f83bea6321151df4ac5de0cb86a1e5f}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a72343e73fe11cd3c0ab392aa437a35d4}{int {\bfseries n\-Learnts} () const }\label{classminisat_1_1Solver_a72343e73fe11cd3c0ab392aa437a35d4}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a2809effd4082689e169a810561542ebd}{int {\bfseries n\-Vars} () const }\label{classminisat_1_1Solver_a2809effd4082689e169a810561542ebd}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aca0943c1730650cb30741c3a9fc52fb0}{void {\bfseries insert\-Var\-Order} (\-Var x)}\label{classminisat_1_1Solver_aca0943c1730650cb30741c3a9fc52fb0}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a3dbd0b4ebf3251b159041a99ca9c47b1}{\hyperlink{classminisat_1_1Lit}{\-Lit} {\bfseries pick\-Branch\-Lit} (int polarity\-\_\-mode, double random\-\_\-var\-\_\-freq)}\label{classminisat_1_1Solver_a3dbd0b4ebf3251b159041a99ca9c47b1}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a1bdb9047759bacc841b8b51c8bf55728}{void {\bfseries new\-Decision\-Level} ()}\label{classminisat_1_1Solver_a1bdb9047759bacc841b8b51c8bf55728}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a66e329bbd1e82d0bc4ecf701c796e81e}{void {\bfseries unchecked\-Enqueue} (\hyperlink{classminisat_1_1Lit}{\-Lit} p, \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$from=\-N\-U\-L\-L)}\label{classminisat_1_1Solver_a66e329bbd1e82d0bc4ecf701c796e81e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a212330717b0a35e5d60edc878ba0b64c}{bool {\bfseries enqueue} (\hyperlink{classminisat_1_1Lit}{\-Lit} p, \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$from=\-N\-U\-L\-L)}\label{classminisat_1_1Solver_a212330717b0a35e5d60edc878ba0b64c}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a85edcbe8e98f7f07f23717afa9e154d8}{\hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ {\bfseries propagate} ()}\label{classminisat_1_1Solver_a85edcbe8e98f7f07f23717afa9e154d8}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a2fb2d91a89d728cdf90f04703d2f51d7}{void {\bfseries cancel\-Until} (int level)}\label{classminisat_1_1Solver_a2fb2d91a89d728cdf90f04703d2f51d7}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad1f4a3bb135e0e6aac4a78e1eb7da1bc}{void {\bfseries analyze} (\hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$confl, \hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ \&out\-\_\-learnt, int \&out\-\_\-btlevel)}\label{classminisat_1_1Solver_ad1f4a3bb135e0e6aac4a78e1eb7da1bc}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a846b00fd76a19f9d37bacd5449287e79}{void {\bfseries analyze\-Final} (\hyperlink{classminisat_1_1Lit}{\-Lit} p, \hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ \&out\-\_\-conflict)}\label{classminisat_1_1Solver_a846b00fd76a19f9d37bacd5449287e79}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a34c914a297ff193536e38d0e93929b68}{bool {\bfseries lit\-Redundant} (\hyperlink{classminisat_1_1Lit}{\-Lit} p, uint32\-\_\-t abstract\-\_\-levels)}\label{classminisat_1_1Solver_a34c914a297ff193536e38d0e93929b68}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a32afacb281ce08a57742dbc8f41564bc}{\hyperlink{classminisat_1_1lbool}{lbool} {\bfseries search} (int nof\-\_\-conflicts, int nof\-\_\-learnts)}\label{classminisat_1_1Solver_a32afacb281ce08a57742dbc8f41564bc}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a62eea2c00917497fbfb843bf9ca4482e}{void {\bfseries reduce\-D\-B} ()}\label{classminisat_1_1Solver_a62eea2c00917497fbfb843bf9ca4482e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a7e324d755d10d7edd5e440b928977a31}{void {\bfseries remove\-Satisfied} (\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ $>$ \&cs)}\label{classminisat_1_1Solver_a7e324d755d10d7edd5e440b928977a31}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aa8a58ee7c65c5c72abf9d758a33d4d36}{void {\bfseries var\-Decay\-Activity} ()}\label{classminisat_1_1Solver_aa8a58ee7c65c5c72abf9d758a33d4d36}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad0fba914fa58e2c9c4c5c99101473b4e}{void {\bfseries var\-Bump\-Activity} (\-Var v)}\label{classminisat_1_1Solver_ad0fba914fa58e2c9c4c5c99101473b4e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ae1084f657969d6d1c8c4f0063a6a5fe9}{void {\bfseries cla\-Decay\-Activity} ()}\label{classminisat_1_1Solver_ae1084f657969d6d1c8c4f0063a6a5fe9}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad7595abd5cb5a12d57226588387a692b}{void {\bfseries cla\-Bump\-Activity} (\hyperlink{classminisat_1_1Clause}{\-Clause} \&c)}\label{classminisat_1_1Solver_ad7595abd5cb5a12d57226588387a692b}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a56a38156f178f527c474f3624307baf5}{void {\bfseries attach\-Clause} (\hyperlink{classminisat_1_1Clause}{\-Clause} \&c)}\label{classminisat_1_1Solver_a56a38156f178f527c474f3624307baf5}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad4d207b2837d3706de6a3445992481c7}{void {\bfseries detach\-Clause} (\hyperlink{classminisat_1_1Clause}{\-Clause} \&c)}\label{classminisat_1_1Solver_ad4d207b2837d3706de6a3445992481c7}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a674d43a50a9ff7559556fb5726ecd975}{void {\bfseries remove\-Clause} (\hyperlink{classminisat_1_1Clause}{\-Clause} \&c)}\label{classminisat_1_1Solver_a674d43a50a9ff7559556fb5726ecd975}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a42685661aa661a8ac2846650a10bb56b}{bool {\bfseries locked} (const \hyperlink{classminisat_1_1Clause}{\-Clause} \&c) const }\label{classminisat_1_1Solver_a42685661aa661a8ac2846650a10bb56b}
+
+\item 
+\hypertarget{classminisat_1_1Solver_acbe150d7743f8ed2a975446aeac996bb}{bool {\bfseries satisfied} (const \hyperlink{classminisat_1_1Clause}{\-Clause} \&c) const }\label{classminisat_1_1Solver_acbe150d7743f8ed2a975446aeac996bb}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aa26b6fd401fe84eddac8ce811a14affb}{int {\bfseries decision\-Level} () const }\label{classminisat_1_1Solver_aa26b6fd401fe84eddac8ce811a14affb}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad187dbe52dee4abb634728f848e2a585}{uint32\-\_\-t {\bfseries abstract\-Level} (\-Var x) const }\label{classminisat_1_1Solver_ad187dbe52dee4abb634728f848e2a585}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a5f43b1d3483ea25964f1f2d14f3352d1}{double {\bfseries progress\-Estimate} () const }\label{classminisat_1_1Solver_a5f43b1d3483ea25964f1f2d14f3352d1}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a49e9496fe40bfa1debd8b53008649696}{void {\bfseries print\-Lit} (\hyperlink{classminisat_1_1Lit}{\-Lit} l)}\label{classminisat_1_1Solver_a49e9496fe40bfa1debd8b53008649696}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a49c4cc66f0dea77371277aae8fb4808e}{{\footnotesize template$<$class C $>$ }\\void {\bfseries print\-Clause} (const \-C \&c)}\label{classminisat_1_1Solver_a49c4cc66f0dea77371277aae8fb4808e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a271efa3932b1a6ab7d21a1c24c0fd4d4}{void {\bfseries verify\-Model} ()}\label{classminisat_1_1Solver_a271efa3932b1a6ab7d21a1c24c0fd4d4}
+
+\item 
+\hypertarget{classminisat_1_1Solver_afbf92c5cd945be5d0544a85989599df3}{void {\bfseries check\-Literal\-Count} ()}\label{classminisat_1_1Solver_afbf92c5cd945be5d0544a85989599df3}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a59d68c94e4cdd013e8cdf32d3c77e76a}{string {\bfseries clause\-\_\-to\-\_\-string} (\hyperlink{classminisat_1_1Clause}{\-Clause} \&c)}\label{classminisat_1_1Solver_a59d68c94e4cdd013e8cdf32d3c77e76a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classminisat_1_1Solver_ab4eba9ff2ad0f5fe5d3a91fe8df50f7d}{static double {\bfseries drand} (double \&seed)}\label{classminisat_1_1Solver_ab4eba9ff2ad0f5fe5d3a91fe8df50f7d}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a4bc83f52cac0f66b3e4b2dcfbc67b0dc}{static int {\bfseries irand} (double \&seed, int size)}\label{classminisat_1_1Solver_a4bc83f52cac0f66b3e4b2dcfbc67b0dc}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classminisat_1_1Solver_aa32eff9dc031271230c84f312c6680d7}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1lbool}{lbool} $>$ {\bfseries model}}\label{classminisat_1_1Solver_aa32eff9dc031271230c84f312c6680d7}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a3cc965bf0cafa90e013d7a3cb51fc00b}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries conflict}}\label{classminisat_1_1Solver_a3cc965bf0cafa90e013d7a3cb51fc00b}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a03cfe9a448d10a47d8dcb74c13a64952}{double {\bfseries var\-\_\-decay}}\label{classminisat_1_1Solver_a03cfe9a448d10a47d8dcb74c13a64952}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a707ac3b4d8a7affe2e365c7b293fc973}{double {\bfseries clause\-\_\-decay}}\label{classminisat_1_1Solver_a707ac3b4d8a7affe2e365c7b293fc973}
+
+\item 
+\hypertarget{classminisat_1_1Solver_af194ac5643b66f2e2c1a781aae46b49a}{double {\bfseries random\-\_\-var\-\_\-freq}}\label{classminisat_1_1Solver_af194ac5643b66f2e2c1a781aae46b49a}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a9b3111e738fd8218e66d7ba5702a9de2}{int {\bfseries restart\-\_\-first}}\label{classminisat_1_1Solver_a9b3111e738fd8218e66d7ba5702a9de2}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ae05b94e624e650907e64fd81162e8273}{double {\bfseries restart\-\_\-inc}}\label{classminisat_1_1Solver_ae05b94e624e650907e64fd81162e8273}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a093f4791e30895b7151470c04c62ec22}{double {\bfseries learntsize\-\_\-factor}}\label{classminisat_1_1Solver_a093f4791e30895b7151470c04c62ec22}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aa1cf87436da8c7c644015c20c96f4563}{double {\bfseries learntsize\-\_\-inc}}\label{classminisat_1_1Solver_aa1cf87436da8c7c644015c20c96f4563}
+
+\item 
+\hypertarget{classminisat_1_1Solver_af521c981b1f803cb258ed13c33967754}{bool {\bfseries expensive\-\_\-ccmin}}\label{classminisat_1_1Solver_af521c981b1f803cb258ed13c33967754}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a5854f2e1ac00f115786fe147aa665628}{int {\bfseries polarity\-\_\-mode}}\label{classminisat_1_1Solver_a5854f2e1ac00f115786fe147aa665628}
+
+\item 
+\hypertarget{classminisat_1_1Solver_abed74544035f7329edc3d957cbb6be3f}{int {\bfseries verbosity}}\label{classminisat_1_1Solver_abed74544035f7329edc3d957cbb6be3f}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a3da608cf70c423ebfb567737e3c42e65}{uint64\-\_\-t {\bfseries starts}}\label{classminisat_1_1Solver_a3da608cf70c423ebfb567737e3c42e65}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a6b4fc2b7ecc787c178bf8ab8cb7bf625}{uint64\-\_\-t {\bfseries decisions}}\label{classminisat_1_1Solver_a6b4fc2b7ecc787c178bf8ab8cb7bf625}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ab07fbd13087bfd76fd2f2d588141a5a7}{uint64\-\_\-t {\bfseries rnd\-\_\-decisions}}\label{classminisat_1_1Solver_ab07fbd13087bfd76fd2f2d588141a5a7}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a7b678e72880b9b535e5756fd6ca22bba}{uint64\-\_\-t {\bfseries propagations}}\label{classminisat_1_1Solver_a7b678e72880b9b535e5756fd6ca22bba}
+
+\item 
+\hypertarget{classminisat_1_1Solver_acdef1485dcd128e16494e7f8464eb49c}{uint64\-\_\-t {\bfseries conflicts}}\label{classminisat_1_1Solver_acdef1485dcd128e16494e7f8464eb49c}
+
+\item 
+\hypertarget{classminisat_1_1Solver_acb994c0215c370daef073312dec59d57}{uint64\-\_\-t {\bfseries clauses\-\_\-literals}}\label{classminisat_1_1Solver_acb994c0215c370daef073312dec59d57}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a1bbd80ada4396f3aecf8d3616c762359}{uint64\-\_\-t {\bfseries learnts\-\_\-literals}}\label{classminisat_1_1Solver_a1bbd80ada4396f3aecf8d3616c762359}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ab6b2d64aa3264f5918a499e4054baa35}{uint64\-\_\-t {\bfseries max\-\_\-literals}}\label{classminisat_1_1Solver_ab6b2d64aa3264f5918a499e4054baa35}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad8ee308d0f7f0c74ef9f647070249c55}{uint64\-\_\-t {\bfseries tot\-\_\-literals}}\label{classminisat_1_1Solver_ad8ee308d0f7f0c74ef9f647070249c55}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac114bf69779df4cdec5d311469ee5449}{bool {\bfseries ok}}\label{classminisat_1_1Solver_ac114bf69779df4cdec5d311469ee5449}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a3cb10a583bbcaa1625f9e2b71703f169}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ $>$ {\bfseries clauses}}\label{classminisat_1_1Solver_a3cb10a583bbcaa1625f9e2b71703f169}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad34ab590cd9962ecbac9a12bc900ef66}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ $>$ {\bfseries learnts}}\label{classminisat_1_1Solver_ad34ab590cd9962ecbac9a12bc900ef66}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac92e97f47895e02f0125b29f1f061c07}{double {\bfseries cla\-\_\-inc}}\label{classminisat_1_1Solver_ac92e97f47895e02f0125b29f1f061c07}
+
+\item 
+\hypertarget{classminisat_1_1Solver_abb4e468ba8b41d95f9980f9adac3265e}{\hyperlink{classvec}{vec}$<$ double $>$ {\bfseries activity}}\label{classminisat_1_1Solver_abb4e468ba8b41d95f9980f9adac3265e}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a1e21e41abdede483ce4eec6e216db80b}{double {\bfseries var\-\_\-inc}}\label{classminisat_1_1Solver_a1e21e41abdede483ce4eec6e216db80b}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aface20e5aff07345dee9b670e0b01500}{\hyperlink{classvec}{vec}$<$ \hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ $>$ $>$ {\bfseries watches}}\label{classminisat_1_1Solver_aface20e5aff07345dee9b670e0b01500}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac470fd1d7ad6e204fc7d8e7c62ef155f}{\hyperlink{classvec}{vec}$<$ char $>$ {\bfseries assigns}}\label{classminisat_1_1Solver_ac470fd1d7ad6e204fc7d8e7c62ef155f}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad6eb80e216f4d0f1e48e9df5a2ec5339}{\hyperlink{classvec}{vec}$<$ char $>$ {\bfseries polarity}}\label{classminisat_1_1Solver_ad6eb80e216f4d0f1e48e9df5a2ec5339}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ae87f02737bef82b66fd6a6e4e97053d9}{\hyperlink{classvec}{vec}$<$ char $>$ {\bfseries decision\-\_\-var}}\label{classminisat_1_1Solver_ae87f02737bef82b66fd6a6e4e97053d9}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ad3df42ecf0c4e079847901949c932f14}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries trail}}\label{classminisat_1_1Solver_ad3df42ecf0c4e079847901949c932f14}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac67c7bf03ab665f803516823dc3e3ae2}{\hyperlink{classvec}{vec}$<$ int $>$ {\bfseries trail\-\_\-lim}}\label{classminisat_1_1Solver_ac67c7bf03ab665f803516823dc3e3ae2}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a4363a684b624ed1e10a294617518cfc5}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Clause}{\-Clause} $\ast$ $>$ {\bfseries reason}}\label{classminisat_1_1Solver_a4363a684b624ed1e10a294617518cfc5}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a3a67329ff5d8fcc93433c9521655f005}{\hyperlink{classvec}{vec}$<$ int $>$ {\bfseries level}}\label{classminisat_1_1Solver_a3a67329ff5d8fcc93433c9521655f005}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a4399d3a1a9b3eb61ea99e14198df2fa6}{int {\bfseries qhead}}\label{classminisat_1_1Solver_a4399d3a1a9b3eb61ea99e14198df2fa6}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a8546336a3b94925c4f4f6d0bae503c3d}{int {\bfseries simp\-D\-B\-\_\-assigns}}\label{classminisat_1_1Solver_a8546336a3b94925c4f4f6d0bae503c3d}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a5b7878dd126b28c9891e3d0f0fbb81aa}{int64\-\_\-t {\bfseries simp\-D\-B\-\_\-props}}\label{classminisat_1_1Solver_a5b7878dd126b28c9891e3d0f0fbb81aa}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ab22235fd1b8a1c8328b05a1eba508418}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries assumptions}}\label{classminisat_1_1Solver_ab22235fd1b8a1c8328b05a1eba508418}
+
+\item 
+\hypertarget{classminisat_1_1Solver_acfabf53fdcbc2b21e1eef0bb0219a8fd}{\hyperlink{classHeap}{\-Heap}$<$ \hyperlink{structminisat_1_1Solver_1_1VarOrderLt}{\-Var\-Order\-Lt} $>$ {\bfseries order\-\_\-heap}}\label{classminisat_1_1Solver_acfabf53fdcbc2b21e1eef0bb0219a8fd}
+
+\item 
+\hypertarget{classminisat_1_1Solver_abffc0abeb571c6b6f57b92874130d24d}{double {\bfseries random\-\_\-seed}}\label{classminisat_1_1Solver_abffc0abeb571c6b6f57b92874130d24d}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a6259a3da45b36d8ac424d3632c0f6642}{double {\bfseries progress\-\_\-estimate}}\label{classminisat_1_1Solver_a6259a3da45b36d8ac424d3632c0f6642}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac7d6f6d12f0f0122441b644fde2f2bdb}{bool {\bfseries remove\-\_\-satisfied}}\label{classminisat_1_1Solver_ac7d6f6d12f0f0122441b644fde2f2bdb}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a7171ba25c8aa7f353968b1b7fed948c0}{\hyperlink{classvec}{vec}$<$ char $>$ {\bfseries seen}}\label{classminisat_1_1Solver_a7171ba25c8aa7f353968b1b7fed948c0}
+
+\item 
+\hypertarget{classminisat_1_1Solver_ac8081a2a3d2ca4eef4c0732a3d664f20}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries analyze\-\_\-stack}}\label{classminisat_1_1Solver_ac8081a2a3d2ca4eef4c0732a3d664f20}
+
+\item 
+\hypertarget{classminisat_1_1Solver_a6300ba1bdf5bf7055b708f758e1f1305}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries analyze\-\_\-toclear}}\label{classminisat_1_1Solver_a6300ba1bdf5bf7055b708f758e1f1305}
+
+\item 
+\hypertarget{classminisat_1_1Solver_af7843e280d603ff54a16e5a89e394ace}{\hyperlink{classvec}{vec}$<$ \hyperlink{classminisat_1_1Lit}{\-Lit} $>$ {\bfseries add\-\_\-tmp}}\label{classminisat_1_1Solver_af7843e280d603ff54a16e5a89e394ace}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classminisat_1_1Solver_ad40549db2de1c4174c0d0f12a3809a22}{class {\bfseries \-Skeleton\-Solver}}\label{classminisat_1_1Solver_ad40549db2de1c4174c0d0f12a3809a22}
+
+\item 
+\hypertarget{classminisat_1_1Solver_aa6615b3eef45ee83d681107d6a6de37e}{class {\bfseries \-Var\-Filter}}\label{classminisat_1_1Solver_aa6615b3eef45ee83d681107d6a6de37e}
+
+\end{DoxyCompactItemize}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+sat-\/solver/\-Sat\-Solver.\-h\item 
+sat-\/solver/\-Sat\-Solver.\-cpp\end{DoxyCompactItemize}

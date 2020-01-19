@@ -1,0 +1,3 @@
+Type: solve
+Status: UNSAT
+((flag = -1| -flag<=0)& ! temp11 = 2& !flag = -1& flag+1<=0)

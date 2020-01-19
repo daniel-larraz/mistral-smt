@@ -1,0 +1,3 @@
+Type: solve
+Status: SAT
+(!sensitive = 0& !field0_64(drf(sensitive)) = 0& 8field8_32(drf(sensitive))<=field_minus_4_32(drf(field0_64(drf(sensitive))))& field_minus_4_32(drf(field0_64(drf(sensitive))))>=0& field268_32(options)<=100& !supported_authentications = 0& supported_authentications>=0& !14 = Bunmodeled4(0)& !0 = bit_and(supported_authentications, 16)& !0 = field32_32(options)& field8_32(drf(sensitive))>0& (!0 = field0_32(drf(array_8(drf(field0_64(drf(sensitive))), 0)))| 0 = array_8(drf(field0_64(drf(sensitive))), 0)))

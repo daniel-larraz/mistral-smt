@@ -1,0 +1,4 @@
+Type: solve
+Status: SAT
+(f_shift8_call = 0& +f_final8_call=f8_call+f_shift8_call& f_shift9_call = 0& (0 = arrayref(drf(a), f8_call+f_shift8_call)| f8_call+f_shift8_call+1<=0| N3:2-f8_call-f_shift8_call<=0)& !0 = arrayref(drf(a), f_shift9_call+f9_call)& +f_shift9_call+f9_call=_s0& -f_shift9_call-f9_call<=0& +f_final9_call=f_shift9_call+f9_call& -N3:2+f_shift9_call+f9_call+1<=0) & a>=0 &N3:2>=0
+
