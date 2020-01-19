@@ -11,9 +11,10 @@ union parse_res_union
   CNode* c;
   Term* t;
   string* s;
+  vector<Term*>* v;
 };
 
-enum PARSE_KIND {PARSE_CNODE, PARSE_TERM, PARSE_STRING};
+enum PARSE_KIND {PARSE_CNODE, PARSE_TERM, PARSE_STRING, PARSE_VECTOR};
 
 struct parse_result
 {
@@ -29,7 +30,6 @@ struct parse_result
 extern YYSTYPE yylval;
 
 #define YYINITDEPTH 100000
-
 
 extern CNode* smt_res_constraint;
 extern Term* smt_res_term;

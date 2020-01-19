@@ -250,6 +250,17 @@ exp: TOKEN_INT
 	$$ = $1;
 }
 |
+TOKEN_LPAREN TOKEN_IDENTIFIER arg_list TOKEN_RPAREN
+{
+     assert($2.kind == PARSE_TERM);
+     assert($3.kind == PARSE_VECTOR);
+     $$.kind = PARSE_TERM;
+     string abduct_symbol = $2.res.t->to_string();
+     vector<Term*>& args = *($3.res.v);
+     $$.res.t = FunctionTerm::make(abduct_symbol, args, true);
+     delete $3.res.v;
+}
+|
 TOKEN_LPAREN exp TOKEN_RPAREN
 {
 	$$ = $2;
@@ -389,7 +400,20 @@ constraint
 
 
 
-
+arg_list: arg_list exp
+{
+  assert($1.kind == PARSE_VECTOR);
+  assert($2.kind == PARSE_TERM);
+  $$ = $1;
+  $$.res.v->push_back($1.res.t);
+}
+| exp
+{
+  assert($1.kind == PARSE_TERM);
+  $$.kind = PARSE_VECTOR;
+  $$.res.v = new vector<Term*>();
+  $$.res.v->push_back($1.res.t);
+}
 
 plus_list: plus_list exp
 {
