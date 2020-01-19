@@ -47,7 +47,6 @@ GT [>]
 GEQ ">="
 LT [<]
 LEQ "<="
-COND "?"
 NOT [nN][oO][tT]
 LET [lL][eE][tT]
 ASSERT [aA][sS][sS][eE][rR][tT]
@@ -56,7 +55,9 @@ SET [(]{WHITESPACE}*[sS][eE][tT]
 DECLARE [(]{WHITESPACE}*[dD][eE][cC][lL][aA][rR][eE]
 CHECK_SAT [(]{WHITESPACE}*[cC][hH][eE][cC][kK][-][sS][aA][tT]{WHITESPACE}*[)]
 EXIT [(]{WHITESPACE}*[eE][xX][iI][tT]{WHITESPACE}*[)]
-  
+
+TRUE  [tT][rR][uU][eE]
+FALSE [fF][aA][lL][sS][eE]
  
 %x STRING
 %x COMMENT
@@ -184,6 +185,13 @@ EXIT [(]{WHITESPACE}*[eE][xX][iI][tT]{WHITESPACE}*[)]
   return TOKEN_LET;
 }
  
+{TRUE} {
+  return TOKEN_TRUE;
+}
+
+{FALSE} {
+  return TOKEN_FALSE;
+}
 
 
 {IDENTIFIER} {

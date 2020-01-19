@@ -56,12 +56,12 @@ TOKEN_GEQ
 TOKEN_LT 
 TOKEN_LEQ 
 
-TOKEN_COND
 TOKEN_ERROR
 TOKEN_LET
 TOKEN_ASSERT
 
-
+TOKEN_TRUE
+TOKEN_FALSE
 
 %nonassoc EXPR
 %nonassoc TOKEN_PRINT 
@@ -125,6 +125,16 @@ TOKEN_LPAREN TOKEN_NOT constraint TOKEN_RPAREN
   $$.kind = PARSE_CNODE;
   $$.res.c = Connective::make_not(c);
   
+}
+| TOKEN_TRUE
+{
+  $$.kind = PARSE_CNODE;
+  $$.res.c = True::make();
+}
+| TOKEN_FALSE
+{
+  $$.kind = PARSE_CNODE;
+  $$.res.c = False::make();
 }
 |
 TOKEN_LPAREN constraint TOKEN_RPAREN
