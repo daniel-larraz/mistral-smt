@@ -60,6 +60,8 @@ TOKEN_LEQ
 TOKEN_ERROR
 TOKEN_LET
 TOKEN_ASSERT
+TOKEN_GET_ABDUCT
+TOKEN_CHECK_SAT
 
 TOKEN_TRUE
 TOKEN_FALSE
@@ -82,13 +84,35 @@ TOKEN_ITE
 %%
 
 
-program: assert_list
+program: opt_assert_list TOKEN_CHECK_SAT
 {
 	assert($1.kind == PARSE_CNODE);
 	CNode* t = $1.res.c;
 	smt_res_constraint = t;
 }
+| opt_assert_list
+  TOKEN_GET_ABDUCT
+    TOKEN_IDENTIFIER
+    constraint
+  TOKEN_RPAREN
+{
+	assert($1.kind == PARSE_CNODE);
+	smt_res_constraint = $1.res.c;
+        assert($3.kind == PARSE_TERM); 
+        smt_res_abduct_id = $3.res.t;
+        assert($4.kind == PARSE_CNODE);
+        smt_res_aduct_conclusion = $4.res.c;
+}
 
+opt_assert_list: assert_list
+{
+  $$ = $1;
+}
+| /* Empty */
+{
+  $$.kind = PARSE_CNODE;
+  $$.res.c = True::make();
+}
 
 assert_list: assert_list assertion
 {

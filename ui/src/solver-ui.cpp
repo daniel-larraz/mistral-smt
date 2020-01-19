@@ -736,11 +736,11 @@ int main(int argc, char** argv)
 		verify_simplification = false;
 		string file_name = argv[2];
 		string constraint = read_file(file_name);
-		CNode* res = smtlib_parse_constraint(constraint, &print_error);
-		if(res != NULL) {
+		SmtResult res = smtlib_parse_constraint(constraint, &print_error);
+		if(res.smt_command == CheckSat) {
 
-			cout << "Constraint: " << res->to_string() << endl;
-			Solver s(res, UNSAT_SIMPLIFY);
+			cout << "Constraint: " << res.constraint->to_string() << endl;
+			Solver s(res.constraint, UNSAT_SIMPLIFY);
 			CNode* res = s.get_result();
 			if(res->get_type() == FALSE_NODE) cout << "UNSAT";
 			else cout << "SAT";
@@ -770,8 +770,9 @@ int main(int argc, char** argv)
 					string file = *it;
 					if(file.find("bofill-scheduling")!= string::npos)
 						exit(0);
-					CNode* c = smtlib_parse_constraint(constraint, &print_error);
+					SmtResult smt_res = smtlib_parse_constraint(constraint, &print_error);
 					cout << "^^^^^^^^^^^ PARSIING COMPLETED ^^^^^^^^^ " << endl;
+                                        CNode* c = smt_res.constraint;
 					if(c == NULL) {
 						cout << "File: " << *it << " PARSE ERROR "  << endl;
 						exit(0);

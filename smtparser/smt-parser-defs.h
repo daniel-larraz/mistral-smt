@@ -33,6 +33,8 @@ extern YYSTYPE yylval;
 
 extern CNode* smt_res_constraint;
 extern Term* smt_res_term;
+extern Term* smt_res_abduct_id;
+extern CNode* smt_res_aduct_conclusion;
 
 struct IteInfo {
   Term* var;

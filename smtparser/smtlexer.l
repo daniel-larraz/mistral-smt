@@ -51,6 +51,7 @@ LEQ "<="
 NOT [nN][oO][tT]
 LET [lL][eE][tT]
 ASSERT [aA][sS][sS][eE][rR][tT]
+GET_ABDUCT [(]{WHITESPACE}*[gG][eE][tT][-][aA][bB][dD][uU][cC][tT]
 
 SET [(]{WHITESPACE}*[sS][eE][tT]
 DECLARE [(]{WHITESPACE}*[dD][eE][cC][lL][aA][rR][eE]
@@ -74,7 +75,7 @@ ITE [iI][tT][eE]
 }
 
 {CHECK_SAT} {
-  /* Do nothing */
+  return TOKEN_CHECK_SAT;
 }
 
 {EXIT} {
@@ -150,6 +151,10 @@ ITE [iI][tT][eE]
 
 {ASSERT} {
  return TOKEN_ASSERT;
+}
+
+{GET_ABDUCT} {
+ return TOKEN_GET_ABDUCT;
 }
 
 {AND} {
