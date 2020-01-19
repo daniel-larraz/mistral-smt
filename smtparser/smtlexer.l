@@ -42,6 +42,7 @@ LPAREN [(]
 RPAREN [)]
 AND [aA][nN][dD]
 OR [oO][rR]
+IMPLIES "=>"
 EQ [=]
 GT [>]
 GEQ ">="
@@ -155,6 +156,10 @@ FALSE [fF][aA][lL][sS][eE]
 
 {OR} {
   return TOKEN_OR;
+}
+
+{IMPLIES} {
+  return TOKEN_IMPLIES;
 }
 
 {EQ} {

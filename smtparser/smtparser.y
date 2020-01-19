@@ -47,7 +47,8 @@ TOKEN_INT
 TOKEN_LPAREN 
 TOKEN_RPAREN 
 TOKEN_AND 
-TOKEN_OR 
+TOKEN_OR
+TOKEN_IMPLIES 
 TOKEN_NOT
 
 TOKEN_EQ 
@@ -125,6 +126,15 @@ TOKEN_LPAREN TOKEN_NOT constraint TOKEN_RPAREN
   $$.kind = PARSE_CNODE;
   $$.res.c = Connective::make_not(c);
   
+}
+|
+TOKEN_LPAREN TOKEN_IMPLIES constraint constraint TOKEN_RPAREN
+{
+  assert($3.kind == PARSE_CNODE);
+  assert($4.kind == PARSE_CNODE);
+  $$.kind = PARSE_CNODE;
+  //$$.res.c = Connective::make(OR, Connective::make_not($3.res.c), $4.res.c);
+  $$.res.c = Connective::make_implies($3.res.c, $4.res.c);
 }
 | TOKEN_TRUE
 {
