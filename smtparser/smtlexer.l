@@ -51,11 +51,11 @@ LEQ "<="
 NOT [nN][oO][tT]
 LET [lL][eE][tT]
 ASSERT [aA][sS][sS][eE][rR][tT]
-GET_ABDUCT [(]{WHITESPACE}*[gG][eE][tT][-][aA][bB][dD][uU][cC][tT]
+CHECK_SAT [cC][hH][eE][cC][kK][-][sS][aA][tT]
+GET_ABDUCT [gG][eE][tT][-][aA][bB][dD][uU][cC][tT]
 
 SET [(]{WHITESPACE}*[sS][eE][tT]
 DECLARE [(]{WHITESPACE}*[dD][eE][cC][lL][aA][rR][eE]
-CHECK_SAT [(]{WHITESPACE}*[cC][hH][eE][cC][kK][-][sS][aA][tT]{WHITESPACE}*[)]
 EXIT [(]{WHITESPACE}*[eE][xX][iI][tT]{WHITESPACE}*[)]
 
 TRUE  [tT][rR][uU][eE]

@@ -5,10 +5,11 @@
 #include "smt-parser.h"
 #include "cnode.h"
 
-CNode* smt_res_constraint;
-Term* smt_res_term;
+bool smt_res_check_sat_found;
 Term* smt_res_abduct_id;
 CNode* smt_res_aduct_conclusion;
+
+set<CNode*> smt_res_asserts;
 
 int smt_ite_id;
 vector<IteInfo> smt_ite_expressions;
@@ -27,27 +28,23 @@ SmtResult smtlib_parse_constraint(const string & s, void (*write_fn)(string))
 {
         smt_ite_id = 1;
 	smt_curr_lineno = 1;
-	smt_res_constraint = NULL;
-	smt_res_term = NULL;
+	smt_res_check_sat_found = false;
         smt_res_abduct_id = NULL;
         smt_res_aduct_conclusion = NULL;
 	smt_parser_error_fn = write_fn;
 	string t = s;
 	zz_scan_string(t.c_str());
 	if(zzparse()!= 0) {
-		smt_res_term = NULL;
-		smt_res_constraint = NULL;
                 smt_res_abduct_id = NULL;
                 smt_res_aduct_conclusion = NULL;
                 return SmtResult();
 	}
-	if(smt_res_constraint == NULL && smt_res_term != NULL && write_fn != NULL) {
-		write_fn("Error: Expected constraint, not term.");
+
+        if (!smt_res_check_sat_found && smt_res_abduct_id == NULL) {
                 return SmtResult();
-	}
+        }
 
         if (!smt_ite_expressions.empty()) {
-          set<CNode*> ops;
           for (auto& ite_info : smt_ite_expressions) {
             CNode* eq1 = EqLeaf::make(ite_info.var, ite_info.term1); 
             CNode* c1 = ite_info.condition;
@@ -57,13 +54,12 @@ SmtResult smtlib_parse_constraint(const string & s, void (*write_fn)(string))
             CNode* c2 = Connective::make_not(ite_info.condition);
             CNode* impl2 = Connective::make_implies(c2, eq2);
 
-            ops.insert(impl1);
-            ops.insert(impl2);
+            smt_res_asserts.insert(impl1);
+            smt_res_asserts.insert(impl2);
           }
-          CNode* ite_defs = Connective::make_and(ops);
-          smt_res_constraint = Connective::make(AND, smt_res_constraint, ite_defs);
         }
 
+        CNode* smt_res_constraint = Connective::make_and(smt_res_asserts);
         if(smt_res_abduct_id == NULL) { // CheckSat
 	  return SmtResult(smt_res_constraint);
         }

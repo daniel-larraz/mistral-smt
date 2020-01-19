@@ -84,54 +84,39 @@ TOKEN_ITE
 %%
 
 
-program: opt_assert_list TOKEN_CHECK_SAT
+script: command_list
+
+command_list: /* Empty */ {}
+| command_list command {}
+
+command: assertion {}
+| TOKEN_LPAREN TOKEN_CHECK_SAT TOKEN_RPAREN
 {
-	assert($1.kind == PARSE_CNODE);
-	CNode* t = $1.res.c;
-	smt_res_constraint = t;
+  if (smt_res_check_sat_found || smt_res_abduct_id != NULL) {
+    zzerror("Found multiple queries. Incremental solving is not supported");
+    YYERROR;
+  }
+  smt_res_check_sat_found = true;
 }
-| opt_assert_list
-  TOKEN_GET_ABDUCT
+| TOKEN_LPAREN TOKEN_GET_ABDUCT
     TOKEN_IDENTIFIER
     constraint
   TOKEN_RPAREN
 {
-	assert($1.kind == PARSE_CNODE);
-	smt_res_constraint = $1.res.c;
-        assert($3.kind == PARSE_TERM); 
-        smt_res_abduct_id = $3.res.t;
-        assert($4.kind == PARSE_CNODE);
-        smt_res_aduct_conclusion = $4.res.c;
-}
-
-opt_assert_list: assert_list
-{
-  $$ = $1;
-}
-| /* Empty */
-{
-  $$.kind = PARSE_CNODE;
-  $$.res.c = True::make();
-}
-
-assert_list: assert_list assertion
-{
-  assert($1.kind == PARSE_CNODE);
-  assert($2.kind == PARSE_CNODE);
-  CNode* c1 = $1.res.c;
-  CNode* c2 = $2.res.c;
-  $$.kind = PARSE_CNODE;
-  $$.res.c = Connective::make(AND, c1, c2);
-}
-|
-assertion
-{
-$$ = $1;
+  if (smt_res_check_sat_found || smt_res_abduct_id != NULL) {
+    zzerror("Found multiple queries. Incremental solving is not supported");
+    YYERROR;
+  }
+  assert($3.kind == PARSE_TERM);
+  assert($4.kind == PARSE_CNODE);
+  smt_res_abduct_id = $3.res.t;
+  smt_res_aduct_conclusion = $4.res.c;
 }
 
 assertion: TOKEN_LPAREN TOKEN_ASSERT constraint TOKEN_RPAREN
 {
-	$$ = $3;
+	assert($3.kind == PARSE_CNODE);
+        smt_res_asserts.insert($3.res.c);
 }
 
 constraint: TOKEN_LPAREN TOKEN_AND and_list TOKEN_RPAREN

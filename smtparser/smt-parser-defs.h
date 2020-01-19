@@ -31,10 +31,11 @@ extern YYSTYPE yylval;
 
 #define YYINITDEPTH 100000
 
-extern CNode* smt_res_constraint;
-extern Term* smt_res_term;
+extern bool smt_res_check_sat_found;
 extern Term* smt_res_abduct_id;
 extern CNode* smt_res_aduct_conclusion;
+
+extern set<CNode*> smt_res_asserts;
 
 struct IteInfo {
   Term* var;
