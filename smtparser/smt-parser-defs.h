@@ -34,6 +34,18 @@ extern YYSTYPE yylval;
 extern CNode* smt_res_constraint;
 extern Term* smt_res_term;
 
+struct IteInfo {
+  Term* var;
+  CNode* condition;
+  Term* term1;
+  Term* term2;
+  IteInfo(Term* ite_var, CNode* cond, Term* exp1, Term* exp2)
+  : var(ite_var), condition(cond), term1(exp1), term2(exp2) {}
+};
+
+extern int smt_ite_id;
+extern vector<IteInfo> smt_ite_expressions;
+
 extern int smt_curr_lineno;
 extern void (*smt_parser_error_fn)(string);
 

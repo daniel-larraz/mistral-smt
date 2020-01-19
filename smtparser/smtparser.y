@@ -63,6 +63,7 @@ TOKEN_ASSERT
 
 TOKEN_TRUE
 TOKEN_FALSE
+TOKEN_ITE
 
 %nonassoc EXPR
 %nonassoc TOKEN_PRINT 
@@ -135,6 +136,17 @@ TOKEN_LPAREN TOKEN_IMPLIES constraint constraint TOKEN_RPAREN
   $$.kind = PARSE_CNODE;
   //$$.res.c = Connective::make(OR, Connective::make_not($3.res.c), $4.res.c);
   $$.res.c = Connective::make_implies($3.res.c, $4.res.c);
+}
+|
+TOKEN_LPAREN TOKEN_ITE constraint constraint constraint TOKEN_RPAREN
+{
+  assert($3.kind == PARSE_CNODE);
+  assert($4.kind == PARSE_CNODE);
+  assert($5.kind == PARSE_CNODE);
+  $$.kind = PARSE_CNODE;
+  CNode* impl1 = Connective::make_implies($3.res.c, $4.res.c);
+  CNode* impl2 = Connective::make_implies(Connective::make_not($3.res.c), $5.res.c);
+  $$.res.c = Connective::make(AND, impl1, impl2);
 }
 | TOKEN_TRUE
 {
@@ -315,7 +327,23 @@ TOKEN_LPAREN TOKEN_TIMES exp exp TOKEN_RPAREN
     terms[other]=ct->get_constant();
     $$.res.t = ArithmeticTerm::make(terms, 0);
 } 
+|
+TOKEN_LPAREN TOKEN_ITE constraint exp exp TOKEN_RPAREN
+{
+    assert($3.kind == PARSE_CNODE);
+    assert($4.kind == PARSE_TERM);
+    assert($5.kind == PARSE_TERM);
 
+    std::ostringstream ss;
+    ss << ".ite_" << smt_ite_id;
+    ++smt_ite_id;
+
+    Term* ite_var = VariableTerm::make(ss.str());
+
+    $$.kind = PARSE_TERM;
+    $$.res.t = ite_var;
+    smt_ite_expressions.push_back(IteInfo(ite_var, $3.res.c, $4.res.t, $5.res.t)); 
+}
 
 
 

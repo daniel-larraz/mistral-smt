@@ -59,6 +59,8 @@ EXIT [(]{WHITESPACE}*[eE][xX][iI][tT]{WHITESPACE}*[)]
 
 TRUE  [tT][rR][uU][eE]
 FALSE [fF][aA][lL][sS][eE]
+
+ITE [iI][tT][eE]
  
 %x STRING
 %x COMMENT
@@ -198,6 +200,9 @@ FALSE [fF][aA][lL][sS][eE]
   return TOKEN_FALSE;
 }
 
+{ITE} {
+  return TOKEN_ITE;
+}
 
 {IDENTIFIER} {
 
