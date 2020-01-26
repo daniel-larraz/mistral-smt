@@ -57,8 +57,10 @@ int main(int argc, char** argv)
         Constraint premises(res.constraint);
         Constraint conclusion(res.conclusion);
         Constraint explanation = conclusion.abduce(premises);
-        cout << "(define-fun " << res.abduct_name->to_string ()
-             << " () Bool " << explanation << ")" << endl;
+        cout << "; " << explanation << endl;
+        auto cnodes = explanation.get_cnodes ();
+        cout << "(define-fun " <<  res.abduct_name->to_string()
+             << " () Bool " << cnodes.first->to_prefix_notation() << ")" << endl;
       }
     }
     catch ( std::exception& e ) {
